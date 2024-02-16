@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BakcellUIKit/BakcellUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BakcellNetworkKit/BakcellNetworkKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BakcellApp/BakcellApp.xcodeproj">
+   </FileRef>
+</Workspace>
