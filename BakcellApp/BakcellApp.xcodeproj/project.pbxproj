@@ -7,9 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2DC9BB2B825DD100846D84 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2DC9BA2B825DD100846D84 /* SnapKit */; };
+		7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57002B81F5FA00A31918 /* Extension.swift */; };
+		7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57022B81F62700A31918 /* Cell+Configurer.swift */; };
+		7A8E57072B81F69600A31918 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57062B81F69600A31918 /* MainNavigation.swift */; };
+		7A8E57092B81F6B100A31918 /* ViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57082B81F6B100A31918 /* ViewController+Navigation.swift */; };
+		7A8E570B2B81F6D300A31918 /* ThemeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E570A2B81F6D300A31918 /* ThemeableViewController.swift */; };
+		7A8E570D2B81F6F700A31918 /* ThemeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E570C2B81F6F700A31918 /* ThemeableView.swift */; };
+		7A8E57122B81F8B800A31918 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57112B81F8B800A31918 /* AppContainer.swift */; };
+		7A8E57142B81F8D400A31918 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57132B81F8D400A31918 /* AppRouter.swift */; };
+		7A8E571D2B81F92000A31918 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57152B81F92000A31918 /* TabBarPresenter.swift */; };
+		7A8E571E2B81F92000A31918 /* TabBarWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57162B81F92000A31918 /* TabBarWorker.swift */; };
+		7A8E571F2B81F92000A31918 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57172B81F92000A31918 /* TabBarRouter.swift */; };
+		7A8E57202B81F92000A31918 /* TabBarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57182B81F92000A31918 /* TabBarModels.swift */; };
+		7A8E57212B81F92000A31918 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57192B81F92000A31918 /* TabBarViewController.swift */; };
+		7A8E57222B81F92000A31918 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E571A2B81F92000A31918 /* TabBarInteractor.swift */; };
+		7A8E57232B81F92000A31918 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E571B2B81F92000A31918 /* TabBarView.swift */; };
+		7A8E57242B81F92000A31918 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E571C2B81F92000A31918 /* TabBarConfigurator.swift */; };
+		7A8E572D2B81FA6100A31918 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57252B81FA6100A31918 /* DashboardPresenter.swift */; };
+		7A8E572E2B81FA6100A31918 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57262B81FA6100A31918 /* DashboardWorker.swift */; };
+		7A8E572F2B81FA6100A31918 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57272B81FA6100A31918 /* DashboardRouter.swift */; };
+		7A8E57302B81FA6100A31918 /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57282B81FA6100A31918 /* DashboardModels.swift */; };
+		7A8E57312B81FA6100A31918 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57292B81FA6100A31918 /* DashboardViewController.swift */; };
+		7A8E57322B81FA6100A31918 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E572A2B81FA6100A31918 /* DashboardInteractor.swift */; };
+		7A8E57332B81FA6100A31918 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E572B2B81FA6100A31918 /* DashboardView.swift */; };
+		7A8E57342B81FA6100A31918 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E572C2B81FA6100A31918 /* DashboardConfigurator.swift */; };
+		7A8E57452B82345E00A31918 /* RoumingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E573D2B82345E00A31918 /* RoumingPresenter.swift */; };
+		7A8E57462B82345E00A31918 /* RoumingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E573E2B82345E00A31918 /* RoumingWorker.swift */; };
+		7A8E57472B82345E00A31918 /* RoumingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E573F2B82345E00A31918 /* RoumingRouter.swift */; };
+		7A8E57482B82345E00A31918 /* RoumingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57402B82345E00A31918 /* RoumingModels.swift */; };
+		7A8E57492B82345E00A31918 /* RoumingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57412B82345E00A31918 /* RoumingViewController.swift */; };
+		7A8E574A2B82345E00A31918 /* RoumingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57422B82345E00A31918 /* RoumingInteractor.swift */; };
+		7A8E574B2B82345E00A31918 /* RoumingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57432B82345E00A31918 /* RoumingView.swift */; };
+		7A8E574C2B82345E00A31918 /* RoumingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57442B82345E00A31918 /* RoumingConfigurator.swift */; };
 		7AF915252B7F2E3800C8E149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF915242B7F2E3800C8E149 /* AppDelegate.swift */; };
-		7AF915272B7F2E3800C8E149 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF915262B7F2E3800C8E149 /* SceneDelegate.swift */; };
-		7AF915292B7F2E3800C8E149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF915282B7F2E3800C8E149 /* ViewController.swift */; };
 		7AF9152E2B7F2E3900C8E149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9152D2B7F2E3900C8E149 /* Assets.xcassets */; };
 		7AF915312B7F2E3900C8E149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9152F2B7F2E3900C8E149 /* LaunchScreen.storyboard */; };
 		7AF915622B7F2EA000C8E149 /* BakcellNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF915612B7F2EA000C8E149 /* BakcellNetworkKit.framework */; };
@@ -34,10 +65,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A8E57002B81F5FA00A31918 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7A8E57022B81F62700A31918 /* Cell+Configurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Configurer.swift"; sourceTree = "<group>"; };
+		7A8E57062B81F69600A31918 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
+		7A8E57082B81F6B100A31918 /* ViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Navigation.swift"; sourceTree = "<group>"; };
+		7A8E570A2B81F6D300A31918 /* ThemeableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableViewController.swift; sourceTree = "<group>"; };
+		7A8E570C2B81F6F700A31918 /* ThemeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableView.swift; sourceTree = "<group>"; };
+		7A8E57112B81F8B800A31918 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		7A8E57132B81F8D400A31918 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		7A8E57152B81F92000A31918 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		7A8E57162B81F92000A31918 /* TabBarWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWorker.swift; sourceTree = "<group>"; };
+		7A8E57172B81F92000A31918 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		7A8E57182B81F92000A31918 /* TabBarModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModels.swift; sourceTree = "<group>"; };
+		7A8E57192B81F92000A31918 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7A8E571A2B81F92000A31918 /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		7A8E571B2B81F92000A31918 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		7A8E571C2B81F92000A31918 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
+		7A8E57252B81FA6100A31918 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		7A8E57262B81FA6100A31918 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
+		7A8E57272B81FA6100A31918 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		7A8E57282B81FA6100A31918 /* DashboardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModels.swift; sourceTree = "<group>"; };
+		7A8E57292B81FA6100A31918 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		7A8E572A2B81FA6100A31918 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		7A8E572B2B81FA6100A31918 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		7A8E572C2B81FA6100A31918 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		7A8E573D2B82345E00A31918 /* RoumingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPresenter.swift; sourceTree = "<group>"; };
+		7A8E573E2B82345E00A31918 /* RoumingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingWorker.swift; sourceTree = "<group>"; };
+		7A8E573F2B82345E00A31918 /* RoumingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingRouter.swift; sourceTree = "<group>"; };
+		7A8E57402B82345E00A31918 /* RoumingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingModels.swift; sourceTree = "<group>"; };
+		7A8E57412B82345E00A31918 /* RoumingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingViewController.swift; sourceTree = "<group>"; };
+		7A8E57422B82345E00A31918 /* RoumingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingInteractor.swift; sourceTree = "<group>"; };
+		7A8E57432B82345E00A31918 /* RoumingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingView.swift; sourceTree = "<group>"; };
+		7A8E57442B82345E00A31918 /* RoumingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingConfigurator.swift; sourceTree = "<group>"; };
 		7AF915212B7F2E3800C8E149 /* BakcellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BakcellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF915242B7F2E3800C8E149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AF915262B7F2E3800C8E149 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AF915282B7F2E3800C8E149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AF9152D2B7F2E3900C8E149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF915302B7F2E3900C8E149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AF915322B7F2E3900C8E149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2DC9BB2B825DD100846D84 /* SnapKit in Frameworks */,
 				7AF915662B7F2EA500C8E149 /* BakcellUIKit.framework in Frameworks */,
 				7AF915622B7F2EA000C8E149 /* BakcellNetworkKit.framework in Frameworks */,
 			);
@@ -58,6 +120,154 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2DC9BC2B826EF700846D84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A2DC9BD2B826EFD00846D84 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7A8E56F82B81F4F000A31918 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A8E56F92B81F4F900A31918 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57002B81F5FA00A31918 /* Extension.swift */,
+				7A8E57022B81F62700A31918 /* Cell+Configurer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A8E56FA2B81F50900A31918 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57052B81F63C00A31918 /* Navigation */,
+				7A8E57042B81F63600A31918 /* Theme */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7A8E56FB2B81F51400A31918 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A8E56FC2B81F51C00A31918 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57102B81F74700A31918 /* Rouming */,
+				7A8E570F2B81F73D00A31918 /* TabBar */,
+				7A8E570E2B81F73300A31918 /* Dashboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7A8E56FD2B81F52500A31918 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AF9152D2B7F2E3900C8E149 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A8E56FE2B81F53700A31918 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				7AF915322B7F2E3900C8E149 /* Info.plist */,
+				7AF9152F2B7F2E3900C8E149 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		7A8E56FF2B81F54400A31918 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7AF915242B7F2E3800C8E149 /* AppDelegate.swift */,
+				7A8E57112B81F8B800A31918 /* AppContainer.swift */,
+				7A8E57132B81F8D400A31918 /* AppRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7A8E57042B81F63600A31918 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E570A2B81F6D300A31918 /* ThemeableViewController.swift */,
+				7A8E570C2B81F6F700A31918 /* ThemeableView.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		7A8E57052B81F63C00A31918 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57062B81F69600A31918 /* MainNavigation.swift */,
+				7A8E57082B81F6B100A31918 /* ViewController+Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7A8E570E2B81F73300A31918 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57252B81FA6100A31918 /* DashboardPresenter.swift */,
+				7A8E57262B81FA6100A31918 /* DashboardWorker.swift */,
+				7A8E57272B81FA6100A31918 /* DashboardRouter.swift */,
+				7A8E57282B81FA6100A31918 /* DashboardModels.swift */,
+				7A8E57292B81FA6100A31918 /* DashboardViewController.swift */,
+				7A8E572A2B81FA6100A31918 /* DashboardInteractor.swift */,
+				7A8E572B2B81FA6100A31918 /* DashboardView.swift */,
+				7A8E572C2B81FA6100A31918 /* DashboardConfigurator.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		7A8E570F2B81F73D00A31918 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E57152B81F92000A31918 /* TabBarPresenter.swift */,
+				7A8E57162B81F92000A31918 /* TabBarWorker.swift */,
+				7A8E57172B81F92000A31918 /* TabBarRouter.swift */,
+				7A8E57182B81F92000A31918 /* TabBarModels.swift */,
+				7A8E57192B81F92000A31918 /* TabBarViewController.swift */,
+				7A8E571A2B81F92000A31918 /* TabBarInteractor.swift */,
+				7A8E571B2B81F92000A31918 /* TabBarView.swift */,
+				7A8E571C2B81F92000A31918 /* TabBarConfigurator.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7A8E57102B81F74700A31918 /* Rouming */ = {
+			isa = PBXGroup;
+			children = (
+				7A2DC9BD2B826EFD00846D84 /* Cells */,
+				7A2DC9BC2B826EF700846D84 /* Views */,
+				7A8E573D2B82345E00A31918 /* RoumingPresenter.swift */,
+				7A8E573E2B82345E00A31918 /* RoumingWorker.swift */,
+				7A8E573F2B82345E00A31918 /* RoumingRouter.swift */,
+				7A8E57402B82345E00A31918 /* RoumingModels.swift */,
+				7A8E57412B82345E00A31918 /* RoumingViewController.swift */,
+				7A8E57422B82345E00A31918 /* RoumingInteractor.swift */,
+				7A8E57432B82345E00A31918 /* RoumingView.swift */,
+				7A8E57442B82345E00A31918 /* RoumingConfigurator.swift */,
+			);
+			path = Rouming;
+			sourceTree = "<group>";
+		};
 		7AF915182B7F2E3800C8E149 = {
 			isa = PBXGroup;
 			children = (
@@ -78,12 +288,14 @@
 		7AF915232B7F2E3800C8E149 /* BakcellApp */ = {
 			isa = PBXGroup;
 			children = (
-				7AF915242B7F2E3800C8E149 /* AppDelegate.swift */,
-				7AF915262B7F2E3800C8E149 /* SceneDelegate.swift */,
-				7AF915282B7F2E3800C8E149 /* ViewController.swift */,
-				7AF9152D2B7F2E3900C8E149 /* Assets.xcassets */,
-				7AF9152F2B7F2E3900C8E149 /* LaunchScreen.storyboard */,
-				7AF915322B7F2E3900C8E149 /* Info.plist */,
+				7A8E56FF2B81F54400A31918 /* App */,
+				7A8E56FE2B81F53700A31918 /* Supporting */,
+				7A8E56FD2B81F52500A31918 /* Resources */,
+				7A8E56FC2B81F51C00A31918 /* Scenes */,
+				7A8E56FB2B81F51400A31918 /* Views */,
+				7A8E56FA2B81F50900A31918 /* Helpers */,
+				7A8E56F92B81F4F900A31918 /* Extensions */,
+				7A8E56F82B81F4F000A31918 /* Model */,
 			);
 			path = BakcellApp;
 			sourceTree = "<group>";
@@ -114,6 +326,9 @@
 			dependencies = (
 			);
 			name = BakcellApp;
+			packageProductDependencies = (
+				7A2DC9BA2B825DD100846D84 /* SnapKit */,
+			);
 			productName = BakcellApp;
 			productReference = 7AF915212B7F2E3800C8E149 /* BakcellApp.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +357,9 @@
 				Base,
 			);
 			mainGroup = 7AF915182B7F2E3800C8E149;
+			packageReferences = (
+				7A2DC9B92B825DD100846D84 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7AF915222B7F2E3800C8E149 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,9 +386,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF915292B7F2E3800C8E149 /* ViewController.swift in Sources */,
+				7A8E57212B81F92000A31918 /* TabBarViewController.swift in Sources */,
+				7A8E57342B81FA6100A31918 /* DashboardConfigurator.swift in Sources */,
+				7A8E571F2B81F92000A31918 /* TabBarRouter.swift in Sources */,
+				7A8E57482B82345E00A31918 /* RoumingModels.swift in Sources */,
+				7A8E574C2B82345E00A31918 /* RoumingConfigurator.swift in Sources */,
+				7A8E572E2B81FA6100A31918 /* DashboardWorker.swift in Sources */,
+				7A8E57072B81F69600A31918 /* MainNavigation.swift in Sources */,
+				7A8E57202B81F92000A31918 /* TabBarModels.swift in Sources */,
+				7A8E570D2B81F6F700A31918 /* ThemeableView.swift in Sources */,
+				7A8E57302B81FA6100A31918 /* DashboardModels.swift in Sources */,
+				7A8E57312B81FA6100A31918 /* DashboardViewController.swift in Sources */,
+				7A8E57092B81F6B100A31918 /* ViewController+Navigation.swift in Sources */,
+				7A8E57322B81FA6100A31918 /* DashboardInteractor.swift in Sources */,
+				7A8E57332B81FA6100A31918 /* DashboardView.swift in Sources */,
+				7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */,
+				7A8E574A2B82345E00A31918 /* RoumingInteractor.swift in Sources */,
 				7AF915252B7F2E3800C8E149 /* AppDelegate.swift in Sources */,
-				7AF915272B7F2E3800C8E149 /* SceneDelegate.swift in Sources */,
+				7A8E57472B82345E00A31918 /* RoumingRouter.swift in Sources */,
+				7A8E57242B81F92000A31918 /* TabBarConfigurator.swift in Sources */,
+				7A8E57452B82345E00A31918 /* RoumingPresenter.swift in Sources */,
+				7A8E572D2B81FA6100A31918 /* DashboardPresenter.swift in Sources */,
+				7A8E57492B82345E00A31918 /* RoumingViewController.swift in Sources */,
+				7A8E57232B81F92000A31918 /* TabBarView.swift in Sources */,
+				7A8E57142B81F8D400A31918 /* AppRouter.swift in Sources */,
+				7A8E571D2B81F92000A31918 /* TabBarPresenter.swift in Sources */,
+				7A8E574B2B82345E00A31918 /* RoumingView.swift in Sources */,
+				7A8E571E2B81F92000A31918 /* TabBarWorker.swift in Sources */,
+				7A8E57222B81F92000A31918 /* TabBarInteractor.swift in Sources */,
+				7A8E57122B81F8B800A31918 /* AppContainer.swift in Sources */,
+				7A8E570B2B81F6D300A31918 /* ThemeableViewController.swift in Sources */,
+				7A8E57462B82345E00A31918 /* RoumingWorker.swift in Sources */,
+				7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */,
+				7A8E572F2B81FA6100A31918 /* DashboardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -297,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -312,16 +560,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 963Q5MY7HY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BakcellApp/Info.plist;
+				INFOPLIST_FILE = BakcellApp/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,9 +576,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazrinatayeva.BakcellApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -340,16 +591,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 963Q5MY7HY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BakcellApp/Info.plist;
+				INFOPLIST_FILE = BakcellApp/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,9 +607,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazrinatayeva.BakcellApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -385,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A2DC9B92B825DD100846D84 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A2DC9BA2B825DD100846D84 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A2DC9B92B825DD100846D84 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AF915192B7F2E3800C8E149 /* Project object */;
 }
