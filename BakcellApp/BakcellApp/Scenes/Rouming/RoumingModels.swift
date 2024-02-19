@@ -13,13 +13,22 @@ enum Rouming {
   
     enum Load {
         
-        struct Request {
-        }
+        struct Request { }
         
-        struct Response {
-        }
+        struct Response { }
         
-        struct ViewModel {
-        }
+        struct ViewModel { }
+    }
+}
+
+
+enum SectionTitle: String, CaseIterable {
+    case travel = "Hara səyahət etmək istəyirsiniz?"
+    case internetPackages = "İnternet paketləri"
+    case allIncludedPackages = "Hamısı daxil paketləri"
+    case callAndSMSPackages = "SMS və zəng paketləri"
+    
+    var displayValue: String {
+        return self.rawValue
     }
 }

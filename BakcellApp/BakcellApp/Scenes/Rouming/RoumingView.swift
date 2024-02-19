@@ -7,10 +7,9 @@
 
 import UIKit
 import BakcellUIKit
+import SnapKit
 
-protocol RoumingViewDelegate: AnyObject {
-    
-}
+protocol RoumingViewDelegate: AnyObject { }
 
 final class RoumingView: UIView, ThemeableView {
     
@@ -18,11 +17,25 @@ final class RoumingView: UIView, ThemeableView {
     
     var theme: ThemeProvider = App.theme
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(InternetPackagesCell.self, forCellReuseIdentifier: "internetPackagesCell")
+        
+        return tableView
+    }()
+    
+    
     init() {
         super.init(frame: .zero)
         
-        
+        self.addSubview(tableView)
         self.addSubviews()
+        self.addConstraints()
         self.setupUI()
     }
     
@@ -43,7 +56,16 @@ final class RoumingView: UIView, ThemeableView {
         self.updateConstraints()
     }
     
+    private func addConstraints() {
+        tableView.snp.updateConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
     private func setupUI() {
         self.backgroundColor = adaptiveColor(.grayPrimary)
     }
+    
 }
+
+
