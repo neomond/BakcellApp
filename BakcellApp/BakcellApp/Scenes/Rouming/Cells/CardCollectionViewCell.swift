@@ -9,6 +9,8 @@ import UIKit
 import BakcellUIKit
 
 class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
+    static  var reuseIdentifier = "CardCollectionViewCell"
+    
     
     var theme: ThemeProvider = App.theme
     
@@ -21,13 +23,12 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         contentView.layer.borderColor = adaptiveColor(.grayPrimary).cgColor
         return contentView
     }()
-    
+     
     
     private lazy var dataAmountLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.boldSystemFont(ofSize: 34)
-        label.text = "100"
         return label
     }()
     
@@ -36,7 +37,6 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.boldSystemFont(ofSize: 22)
-        label.text = "MB"
         return label
     }()
     
@@ -108,10 +108,40 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     }()
     
     
+    func configureCell(type: PackageCellType, dataAmount: String, priceText: String, priceTimePeriod: String, labelText: String) {
+       
+        let isInternetPackage = type == .internet
+        whatsappImageView.isHidden = !isInternetPackage
+        freeLabel.isHidden = !isInternetPackage
+
+        dataUnitLabel.text = isInternetPackage ? "MB" : "dəq"
+        
+        dataAmountLabel.text = dataAmount
+        
+        internetLabel.text = labelText
+
+        let fullPriceAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.boldSystemFont(ofSize: 17),
+            .foregroundColor: adaptiveColor(.black)
+        ]
+        let attributedString = NSMutableAttributedString(string: priceText, attributes: fullPriceAttributes)
+        
+        let timePeriodAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 17),
+            .foregroundColor:  adaptiveColor(.grayInput)
+        ]
+        let timePeriodAttributedString = NSAttributedString(string: priceTimePeriod, attributes: timePeriodAttributes)
+        
+        attributedString.append(timePeriodAttributedString)
+        priceLabel.attributedText = attributedString
+        
+    }
+
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
-        addConstraints()
     }
     
     
@@ -130,10 +160,13 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         containerView.addSubview(priceLabel)
         containerView.addSubview(internetLabel)
         containerView.addSubview(addAction)
+        
+        self.updateConstraints()
     }
     
     
-    private func addConstraints() {
+    override func updateConstraints() {
+        super.updateConstraints()
         containerView.snp.updateConstraints { make in
             make.left.top.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(-12)
@@ -162,7 +195,7 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         }
         
         priceLabel.snp.updateConstraints { make in
-            make.top.equalTo(freeLabel.snp.bottom).offset(12)
+            make.bottom.equalTo(internetLabel.snp.top).offset(-12)
             make.left.equalTo(containerView.snp.left).offset(16)
         }
         
@@ -188,14 +221,14 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
 }
 
 
-//func configure(with title: String, freeText: String, priceText: String, isFree: Bool) {
-//    let fullTitle = "\(title) MB"
-//    let attributedString = NSMutableAttributedString(string: fullTitle)
-//    let range = (fullTitle as NSString).range(of: "MB")
-//
-//    attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 17), range: range)
-//    dataAmountLabel.attributedText = attributedString
-//    freeLabel.text = freeText
-//    priceLabel.text = priceText
-//    whatsappImageView.isHidden = !isFree // Show or hide the WhatsApp image based on whether it's free or not
-//}
+
+
+
+//    private lazy var stackView: UIStackView = {
+//            let stack = UIStackView()
+//            stack.axis = .vertical
+//            stack.alignment = .leading
+//            stack.distribution = .equalSpacing
+//            stack.spacing = 8
+//            return stack
+//        }()

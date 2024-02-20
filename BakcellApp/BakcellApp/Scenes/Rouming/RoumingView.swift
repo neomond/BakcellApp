@@ -25,7 +25,8 @@ final class RoumingView: UIView, ThemeableView {
         tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(InternetPackagesCell.self, forCellReuseIdentifier: "internetPackagesCell")
-        
+        tableView.register(AllIncludedPackagesCell.self, forCellReuseIdentifier: "allIncludedPackagesCell")
+
         return tableView
     }()
     

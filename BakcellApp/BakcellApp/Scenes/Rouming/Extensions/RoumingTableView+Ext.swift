@@ -14,6 +14,10 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         switch sectionTitle {
         case .internetPackages:
             return 1
+        case .callAndSMSPackages:
+            return 1
+        case .allIncludedPackages:
+            return 3
         default:
             return 5
         }
@@ -21,12 +25,27 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let sectionTitle = SectionTitle.allCases[indexPath.section]
         
         switch sectionTitle {
-        case .internetPackages:
+        case .internetPackages, .callAndSMSPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "internetPackagesCell", for: indexPath) as! InternetPackagesCell
+            
+            if sectionTitle == .internetPackages {
+                cell.cellType = .internet
+            } else if sectionTitle == .callAndSMSPackages {
+                cell.cellType = .smsAndCall
+            }
+            
+            cell.backgroundColor = .clear
+            cell.selectionStyle = .none
+            return cell
+            
+        case .allIncludedPackages:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "allIncludedPackagesCell", for: indexPath) as! AllIncludedPackagesCell
+            
+//            let packageModel = allIncludedPackages[indexPath.row]
+//             cell.configure(with: packageModel)
             
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
@@ -34,11 +53,19 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         default:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            if indexPath.row == 0 {
+               
+            } else if indexPath.row == 1 {
+              
+            } else if indexPath.row == 2 {
+                
+            }
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
         }
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return SectionTitle.allCases.count
@@ -65,6 +92,14 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         switch sectionTitle {
         case .internetPackages:
             return 190
+            
+        case .allIncludedPackages:
+            return 160
+            
+        case .callAndSMSPackages:
+            return 150
+            
+            
         default:
             return UITableView.automaticDimension
         }
