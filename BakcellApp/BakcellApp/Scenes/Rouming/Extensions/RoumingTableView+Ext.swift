@@ -12,14 +12,12 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionTitle = SectionTitle.allCases[section]
         switch sectionTitle {
-        case .internetPackages:
-            return 1
-        case .callAndSMSPackages:
+        case .internetPackages, .callAndSMSPackages:
             return 1
         case .allIncludedPackages:
             return 3
         default:
-            return 5
+            return 1
         }
     }
     
@@ -28,6 +26,13 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         let sectionTitle = SectionTitle.allCases[indexPath.section]
         
         switch sectionTitle {
+        case .travel:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.reuseIdentifier, for: indexPath) as! TravelTableViewCell
+            
+            cell.backgroundColor = .clear
+            cell.selectionStyle = .none
+            return cell
+            
         case .internetPackages, .callAndSMSPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "internetPackagesCell", for: indexPath) as! InternetPackagesCell
             
@@ -44,26 +49,28 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         case .allIncludedPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "allIncludedPackagesCell", for: indexPath) as! AllIncludedPackagesCell
             
-//            let packageModel = allIncludedPackages[indexPath.row]
-//             cell.configure(with: packageModel)
+            //            let packageModel = allIncludedPackages[indexPath.row]
+            //             cell.configure(with: packageModel)
             
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
-        default:
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            if indexPath.row == 0 {
-               
-            } else if indexPath.row == 1 {
-              
-            } else if indexPath.row == 2 {
-                
-            }
-            cell.backgroundColor = .clear
-            cell.selectionStyle = .none
-            return cell
         }
+        //        default:
+        //
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //            if indexPath.row == 0 {
+        //
+        //            } else if indexPath.row == 1 {
+        //
+        //            } else if indexPath.row == 2 {
+        //
+        //            }
+        //            cell.backgroundColor = .clear
+        //            cell.selectionStyle = .none
+        //            return cell
+        //        }
     }
     
     
@@ -73,6 +80,11 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if section == 0 {
+            return nil
+        }
+        
         let allTitles = SectionTitle.allCases.map { $0.displayValue }
         
         guard section < allTitles.count else { return nil }
@@ -83,13 +95,16 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+                return CGFloat.leastNormalMagnitude
+            }
         return 44
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let sectionTitle = SectionTitle.allCases[indexPath.section]
-        switch sectionTitle {
+        switch sectionTitle {            
         case .internetPackages:
             return 190
             
@@ -105,3 +120,6 @@ extension RoumingView: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
+
+

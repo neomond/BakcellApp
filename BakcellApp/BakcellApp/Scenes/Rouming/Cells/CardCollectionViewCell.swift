@@ -221,14 +221,3 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
 }
 
 
-
-
-
-//    private lazy var stackView: UIStackView = {
-//            let stack = UIStackView()
-//            stack.axis = .vertical
-//            stack.alignment = .leading
-//            stack.distribution = .equalSpacing
-//            stack.spacing = 8
-//            return stack
-//        }()

@@ -43,6 +43,7 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
         return label
     }()
     
+    
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -110,21 +111,68 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
     private lazy var infoStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
-        stack.alignment = .center
-        stack.distribution = .fill
+        stack.alignment = .leading
+        stack.distribution = .fillProportionally
         stack.spacing = 8
         return stack
+    }()
+    
+    private lazy var internetAmountLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.textAlignment = .center
+        label.text = "1000 MB"
+        return label
+    }()
+    
+    private lazy var callAmountLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.textAlignment = .center
+        label.text = "100 dəq."
+        return label
+    }()
+    
+    private lazy var smsAmountLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.textAlignment = .center
+        label.text = "100"
+        return label
     }()
     
     
     private lazy var  horizontalStackView:UIStackView = {
         let horizontalStackView = UIStackView()
         horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .center
-        horizontalStackView.distribution = .fill
-        horizontalStackView.spacing = 8
         return horizontalStackView
     }()
+    
+    private func createInternetStack() -> UIStackView {
+        let internetStack = UIStackView(arrangedSubviews: [internetQuotaLabel, internetAmountLabel])
+        internetStack.axis = .vertical
+        internetStack.alignment = .leading
+        internetStack.spacing = 8
+        return internetStack
+    }
+    
+    // Method to create the stack view for call data
+    private func createCallStack() -> UIStackView {
+        let callStack = UIStackView(arrangedSubviews: [callQuotaLabel, callAmountLabel])
+        callStack.axis = .vertical
+        callStack.alignment = .leading
+        callStack.spacing = 8
+        return callStack
+    }
+    
+    // Method to create the stack view for SMS data
+    private func createSmsStack() -> UIStackView {
+        let smsStack = UIStackView(arrangedSubviews: [smsQuotaLabel, smsAmountLabel])
+        smsStack.axis = .vertical
+        smsStack.alignment = .leading
+        smsStack.spacing = 8
+        return smsStack
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -135,6 +183,11 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
     private func addSubviews() {
         self.addSubview(containerView)
         
+        
+        let internetStack   = createInternetStack()
+        let callStack       = createCallStack()
+        let smsStack        = createSmsStack()
+        
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(priceLabel)
@@ -142,12 +195,12 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
         horizontalStackView.addArrangedSubview(infoStackView)
         horizontalStackView.addArrangedSubview(addAction)
         
-        infoStackView.addArrangedSubview(internetQuotaLabel)
-        infoStackView.addArrangedSubview(callQuotaLabel)
-        infoStackView.addArrangedSubview(smsQuotaLabel)
+        infoStackView.addArrangedSubview(internetStack)
+        infoStackView.addArrangedSubview(callStack)
+        infoStackView.addArrangedSubview(smsStack)
         
         stackView.addArrangedSubview(horizontalStackView)
-       
+        
         self.updateConstraints()
         
     }
@@ -160,6 +213,7 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
     
     override func updateConstraints() {
         super.updateConstraints()
+        
         containerView.snp.updateConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalToSuperview().inset(16)
@@ -171,34 +225,49 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
         }
         
         titleLabel.snp.updateConstraints { make in
-            make.top.leading.equalToSuperview().inset(16)
+            make.leading.equalToSuperview().inset(16)
+            make.top.equalTo(stackView).offset(16)
         }
-
+        
         priceLabel.snp.updateConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(16)
-            make.left.equalTo(containerView.snp.left).offset(16)
+            make.bottom.equalTo(infoStackView.snp.top).offset(-16)
+            make.left.equalTo(stackView.snp.left).offset(16)
+            make.height.equalTo(32)
         }
         
         infoStackView.snp.updateConstraints { make in
             make.leading.top.bottom.equalToSuperview()
-            make.top.bottom.equalTo(horizontalStackView)
+            make.right.equalTo(addAction.snp.left).offset(-36)
+        }
+        
+        internetQuotaLabel.snp.updateConstraints { make in
+            make.top.equalTo(infoStackView.snp.top).offset(-8)
+        }
+        
+        callQuotaLabel.snp.updateConstraints { make in
+            make.top.equalTo(infoStackView.snp.top).offset(-8)
+        }
+        
+        smsQuotaLabel.snp.updateConstraints { make in
+            make.top.equalTo(infoStackView.snp.top).offset(-8)
         }
         
         horizontalStackView.snp.updateConstraints { make in
-            make.top.equalTo(priceLabel.snp.bottom).offset(4)
-            make.leading.equalTo(containerView.snp.leading).offset(16)
-            make.trailing.equalTo(containerView.snp.trailing).offset(-16)
+            make.top.equalTo(priceLabel.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(16)
         }
         
         addAction.snp.updateConstraints { make in
             make.leading.equalTo(infoStackView.snp.trailing).offset(16)
-            make.centerY.equalTo(horizontalStackView.snp.centerY)
             make.height.width.equalTo(32)
         }
     }
     
-    
     func configure(with model: AllIncludedModel) {
         titleLabel.text = model.title
+        priceLabel.text = model.price
+        internetAmountLabel.text = model.internetQuota
+        callAmountLabel.text = model.callQuota
+        smsAmountLabel.text = model.smsQuota
     }
 }

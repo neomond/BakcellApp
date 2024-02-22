@@ -4,10 +4,15 @@
 //
 //  Created by Nazrin Atayeva on 18.02.24.
 //
+//
+//  MainNavigation.swift
+//  BakcellApp
+//
+//  Created by Sevar Jafarli on 15.02.24.
+//
 
 import UIKit
 import BakcellUIKit
-
 
 final class MainNavigation: UINavigationController, ThemeableViewController {
     
@@ -97,24 +102,24 @@ final class MainNavigation: UINavigationController, ThemeableViewController {
     
     private func setupUI() {
         let titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: adaptiveColor(.main)
+            NSAttributedString.Key.foregroundColor: UIColor.black
         ]
         
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = adaptiveColor(.black)
+            appearance.backgroundColor = .white
             appearance.titleTextAttributes = titleTextAttributes
-            appearance.shadowColor = adaptiveColor(.black)
+            appearance.shadowColor = .white
             self.navigationBar.standardAppearance = appearance
             self.navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
         } else {
-            self.navigationBar.barTintColor = adaptiveColor(.black)
+            self.navigationBar.barTintColor = .black
             self.navigationBar.titleTextAttributes = titleTextAttributes
         }
         
         self.navigationBar.isTranslucent = false
-        self.navigationBar.tintColor = adaptiveColor(.black)
+        self.navigationBar.tintColor = .black
     }
 }
 

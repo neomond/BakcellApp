@@ -26,6 +26,7 @@ final class RoumingView: UIView, ThemeableView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(InternetPackagesCell.self, forCellReuseIdentifier: "internetPackagesCell")
         tableView.register(AllIncludedPackagesCell.self, forCellReuseIdentifier: "allIncludedPackagesCell")
+        tableView.register(TravelTableViewCell.self, forCellReuseIdentifier: "TravelTableViewCell")
 
         return tableView
     }()

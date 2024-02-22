@@ -36,7 +36,7 @@ extension UIViewController {
     
     private func addBackButton() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage.add,
+            image: UIImage(named: "back"),
             style: .plain,
             target: self,
             action: #selector(popToPrevious)
