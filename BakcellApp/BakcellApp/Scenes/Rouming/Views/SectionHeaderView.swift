@@ -19,7 +19,7 @@ class SectionHeaderView: UIView, ThemeableView {
            return label
        }()
     
-    init(title: String, theme: ThemeProvider) {
+    init(title: String) {
            super.init(frame: .zero)
            addSubview(titleLabel)
            titleLabel.text = title

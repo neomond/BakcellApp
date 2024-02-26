@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RoumingWorkingLogic {
-    
+    func fetchRoamingCountries(completion: @escaping ([String]?) -> Void)
 }
 
 final class RoumingWorker: RoumingWorkingLogic {
@@ -19,6 +19,9 @@ final class RoumingWorker: RoumingWorkingLogic {
 
     
     // MARK: - Working Logic
-    
+    func fetchRoamingCountries(completion: @escaping ([String]?) -> Void) {
+        let countries = ["Turkiye", "Rusiya", "Almaniya", "Qazaxistan", "Cexiya", "Ispania", "Italiya"]
+        completion(countries)
+    }
     
 }

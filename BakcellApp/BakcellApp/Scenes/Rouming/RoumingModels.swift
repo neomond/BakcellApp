@@ -19,6 +19,18 @@ enum Rouming {
         
         struct ViewModel { }
     }
+    
+    enum FetchRoamingCountries {
+        struct Request { }
+        
+        struct Response {
+            let countries: [String]?
+        }
+        
+        struct ViewModel {
+            let countries: [String]
+        }
+    }
 }
 
 

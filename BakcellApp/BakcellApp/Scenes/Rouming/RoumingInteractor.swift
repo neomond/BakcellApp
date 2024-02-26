@@ -10,6 +10,8 @@ import UIKit
 protocol RoumingBusinessLogic {
     
     func load(request: Rouming.Load.Request)
+    
+    func loadRoamingCountries(request: Rouming.FetchRoamingCountries.Request)
 }
 
 protocol RoumingDataStore {
@@ -30,4 +32,17 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
         let response = Rouming.Load.Response()
         presenter?.presentLoad(response: response)
     }
+    
+    func loadRoamingCountries(request: Rouming.FetchRoamingCountries.Request) {
+        
+        worker.fetchRoamingCountries { [weak self] data in
+            guard let self = self else {
+                return
+            }
+            let response = Rouming.FetchRoamingCountries.Response(countries: data)
+            self.presenter?.presentRoamingCountries(response: response)
+        }
+      
+    }
+    
 }

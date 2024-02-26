@@ -19,15 +19,11 @@ final class RoumingView: UIView, ThemeableView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
         tableView.register(InternetPackagesCell.self, forCellReuseIdentifier: "internetPackagesCell")
         tableView.register(AllIncludedPackagesCell.self, forCellReuseIdentifier: "allIncludedPackagesCell")
-        tableView.register(TravelTableViewCell.self, forCellReuseIdentifier: "TravelTableViewCell")
-
         return tableView
     }()
     

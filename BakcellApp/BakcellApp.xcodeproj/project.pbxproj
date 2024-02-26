@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		7A2DC9BB2B825DD100846D84 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2DC9BA2B825DD100846D84 /* SnapKit */; };
 		7A2DC9BF2B82772800846D84 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */; };
-		7A2DC9C22B82814700846D84 /* RoumingTableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9C12B82814700846D84 /* RoumingTableView+Ext.swift */; };
+		7A2DC9C22B82814700846D84 /* RoumingTableViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9C12B82814700846D84 /* RoumingTableViewController+Ext.swift */; };
 		7A2DC9CE2B836CE000846D84 /* InternetPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */; };
 		7A2DC9D02B83728600846D84 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9CF2B83728600846D84 /* CardCollectionViewCell.swift */; };
-		7A30764A2B85EF7800A080CE /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3076492B85EF7800A080CE /* TravelTableViewCell.swift */; };
+		7A30764A2B85EF7800A080CE /* TravelTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3076492B85EF7800A080CE /* TravelTableHeaderView.swift */; };
 		7A30764C2B85EF8600A080CE /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30764B2B85EF8600A080CE /* DestinationCollectionViewCell.swift */; };
 		7A30764E2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30764D2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift */; };
+		7A3076592B87640F00A080CE /* CountrySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3076582B87640F00A080CE /* CountrySearchView.swift */; };
 		7A71EF1D2B85219A00608E2A /* AllIncludedPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */; };
 		7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57002B81F5FA00A31918 /* Extension.swift */; };
 		7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57022B81F62700A31918 /* Cell+Configurer.swift */; };
@@ -74,12 +75,13 @@
 
 /* Begin PBXFileReference section */
 		7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
-		7A2DC9C12B82814700846D84 /* RoumingTableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoumingTableView+Ext.swift"; sourceTree = "<group>"; };
+		7A2DC9C12B82814700846D84 /* RoumingTableViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoumingTableViewController+Ext.swift"; sourceTree = "<group>"; };
 		7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackagesCell.swift; sourceTree = "<group>"; };
 		7A2DC9CF2B83728600846D84 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		7A3076492B85EF7800A080CE /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		7A3076492B85EF7800A080CE /* TravelTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableHeaderView.swift; sourceTree = "<group>"; };
 		7A30764B2B85EF8600A080CE /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
 		7A30764D2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCenteredFlowLayout.swift; sourceTree = "<group>"; };
+		7A3076582B87640F00A080CE /* CountrySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchView.swift; sourceTree = "<group>"; };
 		7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackagesCell.swift; sourceTree = "<group>"; };
 		7A8E57002B81F5FA00A31918 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7A8E57022B81F62700A31918 /* Cell+Configurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Configurer.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */,
+				7A3076582B87640F00A080CE /* CountrySearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,7 +153,7 @@
 				7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */,
 				7A2DC9CF2B83728600846D84 /* CardCollectionViewCell.swift */,
 				7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */,
-				7A3076492B85EF7800A080CE /* TravelTableViewCell.swift */,
+				7A3076492B85EF7800A080CE /* TravelTableHeaderView.swift */,
 				7A30764B2B85EF8600A080CE /* DestinationCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -159,7 +162,7 @@
 		7A2DC9C02B82812000846D84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7A2DC9C12B82814700846D84 /* RoumingTableView+Ext.swift */,
+				7A2DC9C12B82814700846D84 /* RoumingTableViewController+Ext.swift */,
 				7A30764D2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift */,
 			);
 			path = Extensions;
@@ -425,7 +428,7 @@
 				7A8E571F2B81F92000A31918 /* TabBarRouter.swift in Sources */,
 				7A8E57482B82345E00A31918 /* RoumingModels.swift in Sources */,
 				7A8E574C2B82345E00A31918 /* RoumingConfigurator.swift in Sources */,
-				7A2DC9C22B82814700846D84 /* RoumingTableView+Ext.swift in Sources */,
+				7A2DC9C22B82814700846D84 /* RoumingTableViewController+Ext.swift in Sources */,
 				7A8E572E2B81FA6100A31918 /* DashboardWorker.swift in Sources */,
 				7A8E57072B81F69600A31918 /* MainNavigation.swift in Sources */,
 				7A8E57202B81F92000A31918 /* TabBarModels.swift in Sources */,
@@ -442,7 +445,7 @@
 				7A8E57472B82345E00A31918 /* RoumingRouter.swift in Sources */,
 				7A8E57242B81F92000A31918 /* TabBarConfigurator.swift in Sources */,
 				7A8E57452B82345E00A31918 /* RoumingPresenter.swift in Sources */,
-				7A30764A2B85EF7800A080CE /* TravelTableViewCell.swift in Sources */,
+				7A30764A2B85EF7800A080CE /* TravelTableHeaderView.swift in Sources */,
 				7A8E572D2B81FA6100A31918 /* DashboardPresenter.swift in Sources */,
 				7A8E57492B82345E00A31918 /* RoumingViewController.swift in Sources */,
 				7A8E57232B81F92000A31918 /* TabBarView.swift in Sources */,
@@ -457,6 +460,7 @@
 				7A8E570B2B81F6D300A31918 /* ThemeableViewController.swift in Sources */,
 				7A8E57462B82345E00A31918 /* RoumingWorker.swift in Sources */,
 				7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */,
+				7A3076592B87640F00A080CE /* CountrySearchView.swift in Sources */,
 				7A2DC9D02B83728600846D84 /* CardCollectionViewCell.swift in Sources */,
 				7A8E572F2B81FA6100A31918 /* DashboardRouter.swift in Sources */,
 			);

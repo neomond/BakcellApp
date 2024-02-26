@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import BakcellUIKit
 
-class DestinationCollectionViewCell: UICollectionViewCell {
+class DestinationCollectionViewCell: UICollectionViewCell, ThemeableView {
+    
+    var theme: ThemeProvider = App.theme
     
     static var reuseIdentifier = "DestinationCollectionViewCell"
+    
+    var data: String? {
+        didSet {
+            configure()
+        }
+    }
+    
     
     private lazy var backView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
         view.layer.cornerRadius = 18
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = adaptiveColor(.grayInput).cgColor
         return view
     }()
     
@@ -25,8 +35,7 @@ class DestinationCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .red
-       
+        label.textColor = adaptiveColor(.grayText)
         label.layer.masksToBounds = true
         return label
     }()
@@ -46,7 +55,7 @@ class DestinationCollectionViewCell: UICollectionViewCell {
        
         self.contentView.addSubview(self.backView)
        
-        super.updateConstraints()
+        self.updateConstraints()
     }
     
    
@@ -55,17 +64,25 @@ class DestinationCollectionViewCell: UICollectionViewCell {
         
         backView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
+            make.height.equalTo(40)
         }
         
         destinationLabel.snp.updateConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(16)
-            make.verticalEdges.equalToSuperview().inset(11)
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview().priority(.high)
+            make.height.equalTo(40)
         }
         
     }
     
     
-    public func configure(with destination: String) {
-        destinationLabel.text = destination
+    func configure() {
+        guard let data = data else {
+            return
+        }
+        
+        destinationLabel.text = data
+        self.contentView.layoutIfNeeded()
     }
 }

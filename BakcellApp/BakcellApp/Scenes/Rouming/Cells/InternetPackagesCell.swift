@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+   
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -29,6 +29,7 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
         contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+            make.height.equalTo(height)
         }
     }
     
@@ -42,7 +43,9 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     var cellType: PackageCellType = .internet
-    
+    var height: CGFloat{
+        return cellType == .internet ? 190 : 150
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
@@ -57,7 +60,7 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: CGFloat = cellType == .internet ? 190 : 150
+        
         return CGSize(width: 167, height: height)
     }
 

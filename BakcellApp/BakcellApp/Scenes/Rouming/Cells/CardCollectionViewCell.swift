@@ -23,6 +23,16 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         contentView.layer.borderColor = adaptiveColor(.grayPrimary).cgColor
         return contentView
     }()
+    
+    
+    private lazy var stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 8
+        stack.distribution = .equalSpacing
+        stack.alignment = .fill
+        return stack
+    }()
      
     
     private lazy var dataAmountLabel: UILabel = {
@@ -152,6 +162,7 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     
     private func addSubviews() {
         self.addSubview(containerView)
+        containerView.addSubview(stackView)
         
         containerView.addSubview(dataAmountLabel)
         containerView.addSubview(dataUnitLabel)
@@ -171,6 +182,12 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
             make.left.top.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(-12)
             make.bottom.equalToSuperview()
+        }
+        
+        stackView.snp.updateConstraints { make in
+            make.top.equalTo(containerView.snp.top).offset(16)
+            make.left.equalTo(containerView.snp.left).offset(16)
+            make.right.equalTo(containerView.snp.right).offset(-16)
         }
         
         dataAmountLabel.snp.updateConstraints { make in
