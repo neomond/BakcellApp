@@ -20,7 +20,9 @@ final class AppRouter {
     }
 
     func main() {
-        let viewController = MainNavigation(rootViewController:   RoumingConfigurator.configure(RoumingViewController()))
+//        let viewController = MainNavigation(rootViewController:   RoumingConfigurator.configure(RoumingViewController()))
+        
+     let viewController = MainNavigation(rootViewController:   RoumingCountryDetailsConfigurator.configure(RoumingCountryDetailsViewController()))
        
         self.window.rootViewController = viewController
         self.window.makeKeyAndVisible()

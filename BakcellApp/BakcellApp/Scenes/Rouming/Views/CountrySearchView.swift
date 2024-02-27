@@ -64,7 +64,6 @@ class CountrySearchView: UIView, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
         
-        
         searchView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

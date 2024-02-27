@@ -122,9 +122,6 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
         case .allIncludedPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "allIncludedPackagesCell", for: indexPath) as! AllIncludedPackagesCell
             
-            //            let packageModel = allIncludedPackages[indexPath.row]
-            //             cell.configure(with: packageModel)
-            
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
