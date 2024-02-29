@@ -33,14 +33,14 @@ class PackagesView: UIView, ThemeableView {
     
     private lazy var pckgsStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 12
+        stackView.spacing = 16
         stackView.backgroundColor = .white
         stackView.layer.cornerRadius = 24
-        stackView.layer.borderWidth = 1.0
-        stackView.layer.borderColor = adaptiveColor(.grayInput).cgColor
+        stackView.layer.borderWidth = 2
+        stackView.layer.borderColor = adaptiveColor(.grayPrimary).cgColor
         stackView.clipsToBounds = true
         stackView.axis = .vertical
-        stackView.spacing = 0
+
         stackView.addArrangedSubview(pckgsHeader)
         stackView.addArrangedSubview(pckgsTitle)
         return stackView
@@ -53,8 +53,8 @@ class PackagesView: UIView, ThemeableView {
        }()
     
     
-    private lazy var whatsappItemsView: WhatAppItemsView = {
-           let view = WhatAppItemsView()
+    private lazy var whatsappItemsView: WhatsAppItemsView = {
+           let view = WhatsAppItemsView()
            return view
        }()
     
@@ -93,7 +93,7 @@ class PackagesView: UIView, ThemeableView {
         self.pckgsStackView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+     
         self.pckgsHeader.snp.updateConstraints { make in
             make.top.left.equalToSuperview().offset(16)
             make.bottom.equalTo(pckgsTitle.snp.top).offset(-8)

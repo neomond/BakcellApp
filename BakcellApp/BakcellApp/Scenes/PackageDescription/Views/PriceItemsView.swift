@@ -67,8 +67,8 @@ class PriceItemsView: UIView, ThemeableView {
         itemWithImgStackView.addArrangedSubview(itemTitle)
         
         itemWithImgStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.top.bottom.equalToSuperview().inset(8)
+            make.edges.equalToSuperview()
+            make.bottom.equalToSuperview().inset(16)
         }
         
         backImgView.snp.makeConstraints { make in
@@ -81,8 +81,10 @@ class PriceItemsView: UIView, ThemeableView {
         }
         
         itemTitleAmount.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+//            make.centerY.equalToSuperview()
+            make.top.equalToSuperview().inset(11)
             make.trailing.equalToSuperview().inset(16)
+         
         }
     }
 }

@@ -48,8 +48,8 @@ class CheckCountryButton: UIButton, ThemeableView {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 20
-        view.layer.borderWidth = 1
-        view.layer.borderColor = adaptiveColor(.grayInput).cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = adaptiveColor(.grayPrimary).cgColor
         return view
     }()
     

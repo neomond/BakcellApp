@@ -67,8 +67,7 @@ class DurationItemView: UIView, ThemeableView {
         itemWithImgStackView.addArrangedSubview(itemTitle)
         
         itemWithImgStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.top.bottom.equalToSuperview().inset(8)
+            make.edges.equalToSuperview()
         }
         
         backImgView.snp.makeConstraints { make in

@@ -31,9 +31,10 @@
 		7A3290432B90958C00FCC3D3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290422B90958C00FCC3D3 /* AboutView.swift */; };
 		7A3290452B909A3900FCC3D3 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290442B909A3900FCC3D3 /* PackagesView.swift */; };
 		7A3290472B909ECB00FCC3D3 /* InternetItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290462B909ECB00FCC3D3 /* InternetItemsView.swift */; };
-		7A3290492B90ABB100FCC3D3 /* WhatAppItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290482B90ABB100FCC3D3 /* WhatAppItemsView.swift */; };
+		7A3290492B90ABB100FCC3D3 /* WhatsAppItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290482B90ABB100FCC3D3 /* WhatsAppItemsView.swift */; };
 		7A32904B2B90AD4100FCC3D3 /* DurationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904A2B90AD4100FCC3D3 /* DurationItemView.swift */; };
 		7A32904D2B90ADE500FCC3D3 /* PriceItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904C2B90ADE500FCC3D3 /* PriceItemsView.swift */; };
+		7A3290502B910A6000FCC3D3 /* FixedActivateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904F2B910A6000FCC3D3 /* FixedActivateButtonView.swift */; };
 		7A71EF1D2B85219A00608E2A /* AllIncludedPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */; };
 		7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57002B81F5FA00A31918 /* Extension.swift */; };
 		7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57022B81F62700A31918 /* Cell+Configurer.swift */; };
@@ -132,9 +133,10 @@
 		7A3290422B90958C00FCC3D3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		7A3290442B909A3900FCC3D3 /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
 		7A3290462B909ECB00FCC3D3 /* InternetItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetItemsView.swift; sourceTree = "<group>"; };
-		7A3290482B90ABB100FCC3D3 /* WhatAppItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatAppItemsView.swift; sourceTree = "<group>"; };
+		7A3290482B90ABB100FCC3D3 /* WhatsAppItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppItemsView.swift; sourceTree = "<group>"; };
 		7A32904A2B90AD4100FCC3D3 /* DurationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationItemView.swift; sourceTree = "<group>"; };
 		7A32904C2B90ADE500FCC3D3 /* PriceItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItemsView.swift; sourceTree = "<group>"; };
+		7A32904F2B910A6000FCC3D3 /* FixedActivateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedActivateButtonView.swift; sourceTree = "<group>"; };
 		7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackagesCell.swift; sourceTree = "<group>"; };
 		7A8E57002B81F5FA00A31918 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7A8E57022B81F62700A31918 /* Cell+Configurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Configurer.swift"; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3290462B909ECB00FCC3D3 /* InternetItemsView.swift */,
-				7A3290482B90ABB100FCC3D3 /* WhatAppItemsView.swift */,
+				7A3290482B90ABB100FCC3D3 /* WhatsAppItemsView.swift */,
 				7A32904A2B90AD4100FCC3D3 /* DurationItemView.swift */,
 				7A32904C2B90ADE500FCC3D3 /* PriceItemsView.swift */,
 			);
@@ -278,8 +280,8 @@
 		7A3290382B8F42C700FCC3D3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				7A32904E2B910A4000FCC3D3 /* Buttons */,
 				7A32903C2B8F530100FCC3D3 /* PackageDescriptionDetailView.swift */,
-				7A32903E2B906DE100FCC3D3 /* CheckCountryView.swift */,
 				7A3290402B9094CB00FCC3D3 /* NotesView.swift */,
 				7A3290422B90958C00FCC3D3 /* AboutView.swift */,
 				7A3290442B909A3900FCC3D3 /* PackagesView.swift */,
@@ -293,6 +295,15 @@
 				7A32903A2B8F508800FCC3D3 /* BulletTextFormatter.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A32904E2B910A4000FCC3D3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7A32903E2B906DE100FCC3D3 /* CheckCountryView.swift */,
+				7A32904F2B910A6000FCC3D3 /* FixedActivateButtonView.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		7A8E56F82B81F4F000A31918 /* Model */ = {
@@ -628,7 +639,7 @@
 				7A8E57322B81FA6100A31918 /* DashboardInteractor.swift in Sources */,
 				7A30764C2B85EF8600A080CE /* DestinationCollectionViewCell.swift in Sources */,
 				7A3290302B8F16AA00FCC3D3 /* PackageDescriptionModels.swift in Sources */,
-				7A3290492B90ABB100FCC3D3 /* WhatAppItemsView.swift in Sources */,
+				7A3290492B90ABB100FCC3D3 /* WhatsAppItemsView.swift in Sources */,
 				7A8E57332B81FA6100A31918 /* DashboardView.swift in Sources */,
 				7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */,
 				7AF9725A2B8C9FC10028CFCA /* RoumingCountryDetailsInteractor.swift in Sources */,
@@ -674,6 +685,7 @@
 				7A3076592B87640F00A080CE /* CountrySearchView.swift in Sources */,
 				7A2DC9D02B83728600846D84 /* CardCollectionViewCell.swift in Sources */,
 				7A3290452B909A3900FCC3D3 /* PackagesView.swift in Sources */,
+				7A3290502B910A6000FCC3D3 /* FixedActivateButtonView.swift in Sources */,
 				7A8E572F2B81FA6100A31918 /* DashboardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

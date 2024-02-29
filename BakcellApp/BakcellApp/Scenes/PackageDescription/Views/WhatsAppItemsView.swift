@@ -1,5 +1,5 @@
 //
-//  WhatAppItemsView.swift
+//  WhatsAppItemsView.swift
 //  BakcellApp
 //
 //  Created by Nazrin Atayeva on 29.02.24.
@@ -9,7 +9,7 @@ import UIKit
 import BakcellUIKit
 import SnapKit
 
-class WhatAppItemsView: UIView, ThemeableView {
+class WhatsAppItemsView: UIView, ThemeableView {
     
     var theme: ThemeProvider = App.theme
     
@@ -37,7 +37,7 @@ class WhatAppItemsView: UIView, ThemeableView {
     
     private lazy var backImgView: UIView = {
         let view = UIView()
-        view.backgroundColor = adaptiveColor(.grayPrimary)
+        view.backgroundColor = adaptiveColor(.green)
         view.layer.cornerRadius = 14
         return view
     }()
@@ -67,8 +67,7 @@ class WhatAppItemsView: UIView, ThemeableView {
         itemWithImgStackView.addArrangedSubview(itemTitle)
         
         itemWithImgStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.top.bottom.equalToSuperview().inset(8)
+            make.edges.equalToSuperview()
         }
         
         backImgView.snp.makeConstraints { make in
@@ -77,7 +76,7 @@ class WhatAppItemsView: UIView, ThemeableView {
         
         itemImageView.snp.makeConstraints { make in
             make.center.equalTo(backImgView)
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(30)
         }
         
         itemTitleAmount.snp.makeConstraints { make in
