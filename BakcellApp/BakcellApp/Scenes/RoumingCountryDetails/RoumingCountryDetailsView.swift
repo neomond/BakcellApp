@@ -20,7 +20,6 @@ final class RoumingCountryDetailsView: UIView, ThemeableView {
     private let roumingCountryCollectionView = RoumingCountryCollectionView()
     
    
-    
     private let roamingSegmentedControl: RoamingSegmentedControl = {
         let control = RoamingSegmentedControl(titles: ["Öncədən ödənişli", "Fakturalı"])
         return control
