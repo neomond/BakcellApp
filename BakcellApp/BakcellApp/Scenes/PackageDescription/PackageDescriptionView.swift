@@ -132,10 +132,10 @@ final class PackageDescriptionView: UIView, ThemeableView {
         self.contentStackView.snp.updateConstraints { make in
             make.edges.equalToSuperview().inset(16)
         }
-        self.fixedActivateButtonView.snp.makeConstraints { make in
+        self.fixedActivateButtonView.snp.updateConstraints { make in
             make.left.right.bottom.equalToSuperview()
         }
-        self.paddingView.snp.makeConstraints { make in
+        self.paddingView.snp.updateConstraints { make in
             make.left.right.equalToSuperview()
             make.bottom.equalTo(fixedActivateButtonView.snp.top)
             make.height.equalTo(24)

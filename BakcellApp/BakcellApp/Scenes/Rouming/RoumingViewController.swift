@@ -15,7 +15,7 @@ protocol RoumingDisplayLogic: AnyObject {
 }
 
 final class RoumingViewController: UIViewController {
-    
+
     var mainView: RoumingView?
     var interactor: RoumingBusinessLogic?
     var router: (RoumingRoutingLogic & RoumingDataPassing)?
@@ -23,6 +23,7 @@ final class RoumingViewController: UIViewController {
     
     private lazy var travelHeaderView: TravelTableHeaderView = {
         let view = TravelTableHeaderView()
+        view.delegate = self
         return view
     }()
     
@@ -160,3 +161,11 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 
+
+extension RoumingViewController: TravelTableHeaderViewDelegate {
+    func onCountrySelected(selectedCountryName: String) {
+        self.interactor?.getSelectedCountry(countryName: selectedCountryName)
+        self.router?.routeToCountryDetail()
+    }
+    
+}

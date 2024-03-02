@@ -8,12 +8,18 @@
 import UIKit
 import BakcellUIKit
 
+protocol TravelTableHeaderViewDelegate: AnyObject {
+    func onCountrySelected(selectedCountryName: String)
+}
+
 class TravelTableHeaderView: UIView, ThemeableView {
     
     var theme: ThemeProvider = App.theme
     
     //Mock data, change later
   
+    weak var delegate: TravelTableHeaderViewDelegate?
+    
     var items: [String] = [] {
         didSet {
             self.destinationsCollectionView.reloadData()
@@ -145,5 +151,10 @@ extension TravelTableHeaderView: UICollectionViewDelegate, UICollectionViewDataS
         cell.data = self.items[indexPath.row]
         print(self.items[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onCountrySelected(selectedCountryName: self.items[indexPath.row])
+        
     }
 }

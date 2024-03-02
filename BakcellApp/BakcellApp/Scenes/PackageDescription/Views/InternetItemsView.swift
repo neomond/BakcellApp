@@ -59,21 +59,21 @@ class InternetItemsView: UIView, ThemeableView {
         itemWithImgStackView.addArrangedSubview(backImgView)
         itemWithImgStackView.addArrangedSubview(itemTitle)
         
-        itemWithImgStackView.snp.makeConstraints { make in
+        itemWithImgStackView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
 //            make.top.bottom.equalToSuperview().inset(8)
         }
         
-        backImgView.snp.makeConstraints { make in
+        backImgView.snp.updateConstraints { make in
             make.width.height.equalTo(40)
         }
         
-        itemImageView.snp.makeConstraints { make in
+        itemImageView.snp.updateConstraints { make in
             make.center.equalTo(backImgView)
             make.width.height.equalTo(20)
         }
         
-        itemTitleAmount.snp.makeConstraints { make in
+        itemTitleAmount.snp.updateConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().inset(16)
         }

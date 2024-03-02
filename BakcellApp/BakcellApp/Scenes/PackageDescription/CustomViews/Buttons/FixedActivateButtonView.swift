@@ -37,7 +37,7 @@ class FixedActivateButtonView: UIView, ThemeableView {
     }
     
     private func setupConstraints() {
-        activateButton.snp.makeConstraints { make in
+        activateButton.snp.updateConstraints { make in
             make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 36, right: 16))
             make.height.equalTo(56)
         }

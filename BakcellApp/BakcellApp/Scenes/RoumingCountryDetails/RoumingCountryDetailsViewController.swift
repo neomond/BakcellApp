@@ -31,7 +31,7 @@ final class RoumingCountryDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showBackButton = true
-        self.title = "Türkiyə"
+        self.title = router?.dataStore?.countryName
         self.load()
     }
   

@@ -89,28 +89,28 @@ class CheckCountryButton: UIButton, ThemeableView {
     }
     
     private func setupConstraints() {
-        containerView.snp.makeConstraints { make in
+        containerView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
         }
         
-        directionIconBackgroundView.snp.makeConstraints { make in
+        directionIconBackgroundView.snp.updateConstraints { make in
             make.left.equalTo(containerView).offset(16)
             make.centerY.equalTo(containerView)
             make.width.height.equalTo(40)
         }
         
-        iconImageView.snp.makeConstraints { make in
+        iconImageView.snp.updateConstraints { make in
             make.center.equalTo(directionIconBackgroundView)
             make.width.height.equalTo(24)
         }
         
         let textStackView = containerView.subviews.first { $0 is UIStackView } as? UIStackView
-        textStackView?.snp.makeConstraints { make in
+        textStackView?.snp.updateConstraints { make in
             make.left.equalTo(directionIconBackgroundView.snp.right).offset(12)
             make.centerY.equalTo(containerView)
         }
         
-        searchIconImageView.snp.makeConstraints { make in
+        searchIconImageView.snp.updateConstraints { make in
             make.right.equalTo(containerView).offset(-16)
             make.centerY.equalTo(containerView)
             make.width.height.equalTo(24)

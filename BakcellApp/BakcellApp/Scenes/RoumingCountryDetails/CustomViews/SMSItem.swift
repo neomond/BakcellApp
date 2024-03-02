@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import SnapKit
 import BakcellUIKit
 
 class SMSItem: UIView, ThemeableView {
     var theme: ThemeProvider = App.theme
-    
     
     private lazy var smsStackView: UIStackView = createSectionStackView()
     
@@ -21,16 +21,14 @@ class SMSItem: UIView, ThemeableView {
         return stackView
     }
     
-    
     private lazy var smsTitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "SMS"
+        label.text = "İnternet"
         label.textColor = .black
         return label
     }()
     
-    // for sms
     private lazy var smsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "cellcall")
@@ -45,14 +43,13 @@ class SMSItem: UIView, ThemeableView {
         return label
     }()
     
-    
     private lazy var smsInAmount: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.text = "Pulsuz"
-        label.textColor = .black
-        return label    }()
-    
+        label.textColor = adaptiveColor(.main)
+        return label
+    }()
     
     private lazy var smsOut: UILabel = {
         let label = UILabel()
@@ -61,7 +58,6 @@ class SMSItem: UIView, ThemeableView {
         label.textColor = .black
         return label
     }()
-    
     
     private lazy var smsOutAmount: UILabel = {
         let label = UILabel()
@@ -90,12 +86,10 @@ class SMSItem: UIView, ThemeableView {
         return stackView
     }()
     
-    
     private lazy var smsOutStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 0
-    
         stackView.distribution = .equalSpacing
         stackView.addArrangedSubview(smsOut)
         stackView.addArrangedSubview(smsOutAmount)
@@ -103,37 +97,50 @@ class SMSItem: UIView, ThemeableView {
     }()
     
     
-    
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.setupViews()
+        setupViews()
     }
-    
     
     required init?(coder: NSCoder) {
-        fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
     
-    
     private func setupViews() {
-        self.updateConstraints()
+        self.addSubview(smsStackView)
         smsStackView.addArrangedSubview(smsHeaderStackView)
         smsStackView.addArrangedSubview(smsInStackView)
         smsStackView.addArrangedSubview(smsOutStackView)
+        
+        self.updateConstraints()
     }
-    
     
     override func updateConstraints() {
         super.updateConstraints()
         
-        // sms stack
-        self.smsImageView.snp.updateConstraints { make in
+        smsStackView.snp.updateConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        smsImageView.snp.updateConstraints { make in
             make.width.equalTo(24)
         }
-        self.smsHeaderStackView.snp.updateConstraints { make in
+        
+        smsHeaderStackView.snp.updateConstraints { make in
             make.height.equalTo(24)
         }
+    }
+}
+
+
+extension SMSItem {
+    func configure(with item: SMSSection) {
+        smsTitleLabel.text = item.title
+        smsImageView.image = UIImage(named: item.imageName)
+        smsIn.text = "Daxil olan"
+        smsInAmount.text = item.incomingCost
+        smsOut.text = "Çıxan" 
+        smsOutAmount.text = item.outgoingCost
     }
 }

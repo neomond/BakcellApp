@@ -35,6 +35,20 @@
 		7A32904B2B90AD4100FCC3D3 /* DurationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904A2B90AD4100FCC3D3 /* DurationItemView.swift */; };
 		7A32904D2B90ADE500FCC3D3 /* PriceItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904C2B90ADE500FCC3D3 /* PriceItemsView.swift */; };
 		7A3290502B910A6000FCC3D3 /* FixedActivateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32904F2B910A6000FCC3D3 /* FixedActivateButtonView.swift */; };
+		7A32905A2B91A60C00FCC3D3 /* SupportedCountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290522B91A60C00FCC3D3 /* SupportedCountriesPresenter.swift */; };
+		7A32905B2B91A60C00FCC3D3 /* SupportedCountriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290532B91A60C00FCC3D3 /* SupportedCountriesWorker.swift */; };
+		7A32905C2B91A60C00FCC3D3 /* SupportedCountriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290542B91A60C00FCC3D3 /* SupportedCountriesRouter.swift */; };
+		7A32905D2B91A60C00FCC3D3 /* SupportedCountriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290552B91A60C00FCC3D3 /* SupportedCountriesModels.swift */; };
+		7A32905E2B91A60C00FCC3D3 /* SupportedCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290562B91A60C00FCC3D3 /* SupportedCountriesViewController.swift */; };
+		7A32905F2B91A60C00FCC3D3 /* SupportedCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290572B91A60C00FCC3D3 /* SupportedCountriesInteractor.swift */; };
+		7A3290602B91A60C00FCC3D3 /* SupportedCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290582B91A60C00FCC3D3 /* SupportedCountriesView.swift */; };
+		7A3290612B91A60C00FCC3D3 /* SupportedCountriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290592B91A60C00FCC3D3 /* SupportedCountriesConfigurator.swift */; };
+		7A3290662B91AE5D00FCC3D3 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290652B91AE5D00FCC3D3 /* CountryTableViewCell.swift */; };
+		7A32906A2B91F32F00FCC3D3 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290692B91F32F00FCC3D3 /* BorderedView.swift */; };
+		7A32906C2B91F33800FCC3D3 /* CellCallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32906B2B91F33800FCC3D3 /* CellCallItem.swift */; };
+		7A32906E2B91F34300FCC3D3 /* SMSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32906D2B91F34300FCC3D3 /* SMSItem.swift */; };
+		7A3290702B91F35800FCC3D3 /* RoamingSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32906F2B91F35800FCC3D3 /* RoamingSegmentedControl.swift */; };
+		7A3290722B93D86D00FCC3D3 /* InternetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3290712B93D86D00FCC3D3 /* InternetItem.swift */; };
 		7A71EF1D2B85219A00608E2A /* AllIncludedPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */; };
 		7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57002B81F5FA00A31918 /* Extension.swift */; };
 		7A8E57032B81F62700A31918 /* Cell+Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57022B81F62700A31918 /* Cell+Configurer.swift */; };
@@ -85,13 +99,8 @@
 		7AF9725C2B8C9FC10028CFCA /* RoumingCountryDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972542B8C9FC10028CFCA /* RoumingCountryDetailsConfigurator.swift */; };
 		7AF972602B8CA4610028CFCA /* RoumingCountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9725F2B8CA4610028CFCA /* RoumingCountryCollectionViewCell.swift */; };
 		7AF972622B8CA49D0028CFCA /* RoumingCountryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972612B8CA49D0028CFCA /* RoumingCountryCollectionView.swift */; };
-		7AF972652B8D20E00028CFCA /* RoamingSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972642B8D20E00028CFCA /* RoamingSegmentedControl.swift */; };
 		7AF972672B8DB2100028CFCA /* RoamingDetailsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972662B8DB2100028CFCA /* RoamingDetailsTableView.swift */; };
 		7AF972692B8DB2560028CFCA /* RoumingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972682B8DB2560028CFCA /* RoumingTableViewCell.swift */; };
-		7AF9726B2B8E66170028CFCA /* CellCallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9726A2B8E66170028CFCA /* CellCallItem.swift */; };
-		7AF9726D2B8E6A610028CFCA /* SMSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9726C2B8E6A610028CFCA /* SMSItem.swift */; };
-		7AF9726F2B8E6B580028CFCA /* InternetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9726E2B8E6B580028CFCA /* InternetItem.swift */; };
-		7AF972712B8E6C800028CFCA /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF972702B8E6C800028CFCA /* BorderedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +146,20 @@
 		7A32904A2B90AD4100FCC3D3 /* DurationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationItemView.swift; sourceTree = "<group>"; };
 		7A32904C2B90ADE500FCC3D3 /* PriceItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItemsView.swift; sourceTree = "<group>"; };
 		7A32904F2B910A6000FCC3D3 /* FixedActivateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedActivateButtonView.swift; sourceTree = "<group>"; };
+		7A3290522B91A60C00FCC3D3 /* SupportedCountriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesPresenter.swift; sourceTree = "<group>"; };
+		7A3290532B91A60C00FCC3D3 /* SupportedCountriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesWorker.swift; sourceTree = "<group>"; };
+		7A3290542B91A60C00FCC3D3 /* SupportedCountriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesRouter.swift; sourceTree = "<group>"; };
+		7A3290552B91A60C00FCC3D3 /* SupportedCountriesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesModels.swift; sourceTree = "<group>"; };
+		7A3290562B91A60C00FCC3D3 /* SupportedCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesViewController.swift; sourceTree = "<group>"; };
+		7A3290572B91A60C00FCC3D3 /* SupportedCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesInteractor.swift; sourceTree = "<group>"; };
+		7A3290582B91A60C00FCC3D3 /* SupportedCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesView.swift; sourceTree = "<group>"; };
+		7A3290592B91A60C00FCC3D3 /* SupportedCountriesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountriesConfigurator.swift; sourceTree = "<group>"; };
+		7A3290652B91AE5D00FCC3D3 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		7A3290692B91F32F00FCC3D3 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
+		7A32906B2B91F33800FCC3D3 /* CellCallItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCallItem.swift; sourceTree = "<group>"; };
+		7A32906D2B91F34300FCC3D3 /* SMSItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSItem.swift; sourceTree = "<group>"; };
+		7A32906F2B91F35800FCC3D3 /* RoamingSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoamingSegmentedControl.swift; sourceTree = "<group>"; };
+		7A3290712B93D86D00FCC3D3 /* InternetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetItem.swift; sourceTree = "<group>"; };
 		7A71EF1C2B85219A00608E2A /* AllIncludedPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackagesCell.swift; sourceTree = "<group>"; };
 		7A8E57002B81F5FA00A31918 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7A8E57022B81F62700A31918 /* Cell+Configurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Configurer.swift"; sourceTree = "<group>"; };
@@ -187,13 +210,8 @@
 		7AF972542B8C9FC10028CFCA /* RoumingCountryDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailsConfigurator.swift; sourceTree = "<group>"; };
 		7AF9725F2B8CA4610028CFCA /* RoumingCountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryCollectionViewCell.swift; sourceTree = "<group>"; };
 		7AF972612B8CA49D0028CFCA /* RoumingCountryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryCollectionView.swift; sourceTree = "<group>"; };
-		7AF972642B8D20E00028CFCA /* RoamingSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingSegmentedControl.swift; sourceTree = "<group>"; };
 		7AF972662B8DB2100028CFCA /* RoamingDetailsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingDetailsTableView.swift; sourceTree = "<group>"; };
 		7AF972682B8DB2560028CFCA /* RoumingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingTableViewCell.swift; sourceTree = "<group>"; };
-		7AF9726A2B8E66170028CFCA /* CellCallItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCallItem.swift; sourceTree = "<group>"; };
-		7AF9726C2B8E6A610028CFCA /* SMSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSItem.swift; sourceTree = "<group>"; };
-		7AF9726E2B8E6B580028CFCA /* InternetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetItem.swift; sourceTree = "<group>"; };
-		7AF972702B8E6C800028CFCA /* BorderedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +324,46 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		7A3290512B91A5EB00FCC3D3 /* SupportedCountries */ = {
+			isa = PBXGroup;
+			children = (
+				7A3290642B91AE5400FCC3D3 /* Cells */,
+				7A3290632B91AD7300FCC3D3 /* Views */,
+				7A3290622B91AA7300FCC3D3 /* CustomViews */,
+				7A3290522B91A60C00FCC3D3 /* SupportedCountriesPresenter.swift */,
+				7A3290532B91A60C00FCC3D3 /* SupportedCountriesWorker.swift */,
+				7A3290542B91A60C00FCC3D3 /* SupportedCountriesRouter.swift */,
+				7A3290552B91A60C00FCC3D3 /* SupportedCountriesModels.swift */,
+				7A3290562B91A60C00FCC3D3 /* SupportedCountriesViewController.swift */,
+				7A3290572B91A60C00FCC3D3 /* SupportedCountriesInteractor.swift */,
+				7A3290582B91A60C00FCC3D3 /* SupportedCountriesView.swift */,
+				7A3290592B91A60C00FCC3D3 /* SupportedCountriesConfigurator.swift */,
+			);
+			path = SupportedCountries;
+			sourceTree = "<group>";
+		};
+		7A3290622B91AA7300FCC3D3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7A3290632B91AD7300FCC3D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A3290642B91AE5400FCC3D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7A3290652B91AE5D00FCC3D3 /* CountryTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		7A8E56F82B81F4F000A31918 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +399,7 @@
 		7A8E56FC2B81F51C00A31918 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7A3290512B91A5EB00FCC3D3 /* SupportedCountries */,
 				7A3290352B8F16FE00FCC3D3 /* PackageDescription */,
 				7AF9724C2B8C9F080028CFCA /* RoumingCountryDetails */,
 				7A8E57102B81F74700A31918 /* Rouming */,
@@ -523,11 +582,11 @@
 		7AF972632B8D20D30028CFCA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				7AF972642B8D20E00028CFCA /* RoamingSegmentedControl.swift */,
-				7AF9726A2B8E66170028CFCA /* CellCallItem.swift */,
-				7AF9726C2B8E6A610028CFCA /* SMSItem.swift */,
-				7AF9726E2B8E6B580028CFCA /* InternetItem.swift */,
-				7AF972702B8E6C800028CFCA /* BorderedView.swift */,
+				7A3290692B91F32F00FCC3D3 /* BorderedView.swift */,
+				7A32906F2B91F35800FCC3D3 /* RoamingSegmentedControl.swift */,
+				7A32906B2B91F33800FCC3D3 /* CellCallItem.swift */,
+				7A32906D2B91F34300FCC3D3 /* SMSItem.swift */,
+				7A3290712B93D86D00FCC3D3 /* InternetItem.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -614,28 +673,36 @@
 				7A8E57212B81F92000A31918 /* TabBarViewController.swift in Sources */,
 				7A30764E2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift in Sources */,
 				7AF972692B8DB2560028CFCA /* RoumingTableViewCell.swift in Sources */,
+				7A32905B2B91A60C00FCC3D3 /* SupportedCountriesWorker.swift in Sources */,
 				7A2DC9CE2B836CE000846D84 /* InternetPackagesCell.swift in Sources */,
+				7A3290602B91A60C00FCC3D3 /* SupportedCountriesView.swift in Sources */,
 				7AF972572B8C9FC10028CFCA /* RoumingCountryDetailsRouter.swift in Sources */,
+				7A3290662B91AE5D00FCC3D3 /* CountryTableViewCell.swift in Sources */,
 				7A8E57342B81FA6100A31918 /* DashboardConfigurator.swift in Sources */,
 				7A3290342B8F16AA00FCC3D3 /* PackageDescriptionConfigurator.swift in Sources */,
 				7A8E571F2B81F92000A31918 /* TabBarRouter.swift in Sources */,
 				7A8E57482B82345E00A31918 /* RoumingModels.swift in Sources */,
 				7AF972582B8C9FC10028CFCA /* RoumingCountryDetailsModels.swift in Sources */,
 				7A3290332B8F16AA00FCC3D3 /* PackageDescriptionView.swift in Sources */,
+				7A32905F2B91A60C00FCC3D3 /* SupportedCountriesInteractor.swift in Sources */,
 				7AF972552B8C9FC10028CFCA /* RoumingCountryDetailsPresenter.swift in Sources */,
+				7A32905E2B91A60C00FCC3D3 /* SupportedCountriesViewController.swift in Sources */,
 				7AF972622B8CA49D0028CFCA /* RoumingCountryCollectionView.swift in Sources */,
+				7A32905A2B91A60C00FCC3D3 /* SupportedCountriesPresenter.swift in Sources */,
 				7A8E574C2B82345E00A31918 /* RoumingConfigurator.swift in Sources */,
 				7A2DC9C22B82814700846D84 /* RoumingTableViewController+Ext.swift in Sources */,
 				7A8E572E2B81FA6100A31918 /* DashboardWorker.swift in Sources */,
+				7A3290722B93D86D00FCC3D3 /* InternetItem.swift in Sources */,
+				7A32905C2B91A60C00FCC3D3 /* SupportedCountriesRouter.swift in Sources */,
 				7A32902E2B8F16AA00FCC3D3 /* PackageDescriptionWorker.swift in Sources */,
 				7A8E57072B81F69600A31918 /* MainNavigation.swift in Sources */,
 				7A32904D2B90ADE500FCC3D3 /* PriceItemsView.swift in Sources */,
 				7A8E57202B81F92000A31918 /* TabBarModels.swift in Sources */,
 				7A8E570D2B81F6F700A31918 /* ThemeableView.swift in Sources */,
 				7A8E57302B81FA6100A31918 /* DashboardModels.swift in Sources */,
+				7A3290702B91F35800FCC3D3 /* RoamingSegmentedControl.swift in Sources */,
 				7A8E57312B81FA6100A31918 /* DashboardViewController.swift in Sources */,
 				7A8E57092B81F6B100A31918 /* ViewController+Navigation.swift in Sources */,
-				7AF9726D2B8E6A610028CFCA /* SMSItem.swift in Sources */,
 				7A8E57322B81FA6100A31918 /* DashboardInteractor.swift in Sources */,
 				7A30764C2B85EF8600A080CE /* DestinationCollectionViewCell.swift in Sources */,
 				7A3290302B8F16AA00FCC3D3 /* PackageDescriptionModels.swift in Sources */,
@@ -645,10 +712,11 @@
 				7AF9725A2B8C9FC10028CFCA /* RoumingCountryDetailsInteractor.swift in Sources */,
 				7AF972672B8DB2100028CFCA /* RoamingDetailsTableView.swift in Sources */,
 				7A8E574A2B82345E00A31918 /* RoumingInteractor.swift in Sources */,
+				7A32906A2B91F32F00FCC3D3 /* BorderedView.swift in Sources */,
 				7AF915252B7F2E3800C8E149 /* AppDelegate.swift in Sources */,
 				7A8E57472B82345E00A31918 /* RoumingRouter.swift in Sources */,
+				7A32906E2B91F34300FCC3D3 /* SMSItem.swift in Sources */,
 				7A32903F2B906DE100FCC3D3 /* CheckCountryView.swift in Sources */,
-				7AF972712B8E6C800028CFCA /* BorderedView.swift in Sources */,
 				7AF9725B2B8C9FC10028CFCA /* RoumingCountryDetailsView.swift in Sources */,
 				7AF972562B8C9FC10028CFCA /* RoumingCountryDetailsWorker.swift in Sources */,
 				7A3290432B90958C00FCC3D3 /* AboutView.swift in Sources */,
@@ -666,19 +734,19 @@
 				7A8E571D2B81F92000A31918 /* TabBarPresenter.swift in Sources */,
 				7AF972592B8C9FC10028CFCA /* RoumingCountryDetailsViewController.swift in Sources */,
 				7A8E574B2B82345E00A31918 /* RoumingView.swift in Sources */,
+				7A32906C2B91F33800FCC3D3 /* CellCallItem.swift in Sources */,
 				7A3290312B8F16AA00FCC3D3 /* PackageDescriptionViewController.swift in Sources */,
+				7A3290612B91A60C00FCC3D3 /* SupportedCountriesConfigurator.swift in Sources */,
 				7A8E571E2B81F92000A31918 /* TabBarWorker.swift in Sources */,
 				7A2DC9BF2B82772800846D84 /* SectionHeaderView.swift in Sources */,
-				7AF972652B8D20E00028CFCA /* RoamingSegmentedControl.swift in Sources */,
+				7A32905D2B91A60C00FCC3D3 /* SupportedCountriesModels.swift in Sources */,
 				7A8E57222B81F92000A31918 /* TabBarInteractor.swift in Sources */,
 				7A32903D2B8F530100FCC3D3 /* PackageDescriptionDetailView.swift in Sources */,
 				7A8E57122B81F8B800A31918 /* AppContainer.swift in Sources */,
-				7AF9726B2B8E66170028CFCA /* CellCallItem.swift in Sources */,
 				7AF972602B8CA4610028CFCA /* RoumingCountryCollectionViewCell.swift in Sources */,
 				7A8E570B2B81F6D300A31918 /* ThemeableViewController.swift in Sources */,
 				7A8E57462B82345E00A31918 /* RoumingWorker.swift in Sources */,
 				7A32903B2B8F508800FCC3D3 /* BulletTextFormatter.swift in Sources */,
-				7AF9726F2B8E6B580028CFCA /* InternetItem.swift in Sources */,
 				7A32904B2B90AD4100FCC3D3 /* DurationItemView.swift in Sources */,
 				7A8E57012B81F5FA00A31918 /* Extension.swift in Sources */,
 				7A32902D2B8F16AA00FCC3D3 /* PackageDescriptionPresenter.swift in Sources */,

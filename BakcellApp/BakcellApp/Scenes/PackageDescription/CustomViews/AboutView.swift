@@ -46,7 +46,7 @@ class AboutView: UIView, ThemeableView {
        private func setupView() {
            addSubview(stackView)
            stackView.addArrangedSubview(aboutTitleLabel)
-           stackView.snp.makeConstraints { make in
+           stackView.snp.updateConstraints { make in
                make.edges.equalToSuperview()
            }
        }

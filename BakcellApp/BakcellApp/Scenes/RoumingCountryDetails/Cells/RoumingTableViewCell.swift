@@ -30,100 +30,7 @@ class RoumingTableViewCell: UITableViewCell {
         return label
     }()
     
-    
-//    -----------------------------
-    private lazy var cellcallTitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Zənglər"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var cellcallImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "cellcall")
-        return imageView
-    }()
-    
-    
-    private lazy var cellIn: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Daxil olan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var cellInAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "0.39 ₼ /dəq"
-        label.textColor = .black
-        return label    }()
-    
-    
-    private lazy var cellOut: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Çıxan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var cellOutAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "0.39 ₼ /dəq"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var cellInStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(cellIn)
-        stackView.addArrangedSubview(cellInAmount)
-        return stackView
-    }()
-    
-    
-    private lazy var cellOutStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
-    
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(cellOut)
-        stackView.addArrangedSubview(cellOutAmount)
-        return stackView
-    }()
-    
-    
-    private lazy var headerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 12
-        stackView.addArrangedSubview(cellcallImageView)
-        stackView.addArrangedSubview(cellcallTitleLabel)
-        return stackView
-    }()
-    
-    private lazy var cellCallItemView: CellCallItem = {
-        let view = CellCallItem()
-        return view
-    }()
 
-//    -----------------------------
-//    -----------------------------
-//    -----------------------------
-    
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -131,197 +38,43 @@ class RoumingTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    
-    private lazy var callsStackView: UIStackView = createSectionStackView()
-    private lazy var smsStackView: UIStackView = createSectionStackView()
-    private lazy var internetStackView: UIStackView = createSectionStackView()
-    
-    
-    private func createSectionStackView() -> UIStackView {
+    private lazy var servicesStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 16
-        return stackView
-    }
-    
-    
-    // for sms
-    private lazy var smsTitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "SMS"
-        label.textColor = .black
-        return label
-    }()
-    
-    // for sms
-    private lazy var smsImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "cellcall")
-        return imageView
-    }()
-    
-    private lazy var smsIn: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Daxil olan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var smsInAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Pulsuz"
-        label.textColor = .black
-        return label    }()
-    
-    
-    private lazy var smsOut: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Çıxan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var smsOutAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "0.39 ₼ /dəq"
-        label.textColor = .black
-        return label
-    }()
-    
-    private lazy var smsHeaderStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 12
-        stackView.addArrangedSubview(smsImageView)
-        stackView.addArrangedSubview(smsTitleLabel)
-        return stackView
-    }()
-    
-    private lazy var smsInStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(smsIn)
-        stackView.addArrangedSubview(smsInAmount)
+        stackView.spacing = 24
         return stackView
     }()
     
     
-    private lazy var smsOutStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
+    private lazy var cellCallItem: CellCallItem = {
+           let item = CellCallItem()
+           return item
+       }()
     
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(smsOut)
-        stackView.addArrangedSubview(smsOutAmount)
-        return stackView
+    
+    private lazy var smsItem: SMSItem = {
+           let item = SMSItem()
+           return item
+       }()
+    
+    
+    private lazy var internetItem: InternetItem = {
+        let item = InternetItem()
+        return item
     }()
-    
-    
-    // for internet
-    private lazy var internetHeaderStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 12
-        stackView.addArrangedSubview(internetImageView)
-        stackView.addArrangedSubview(internetTitleLabel)
-        return stackView
-    }()
-    
-    
-    // for internet
-    private lazy var internetTitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "İnternet"
-        label.textColor = .black
-        return label
-    }()
-    
-    // for internet
-    private lazy var internetImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "cellcall")
-        return imageView
-    }()
-    
-    
-    private lazy var internetIn: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Daxil olan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var internetInAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Pulsuz"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var internetOut: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Çıxan"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var internetOutAmount: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "0.39 ₼ /dəq"
-        label.textColor = .black
-        return label
-    }()
-    
-    
-    private lazy var internetInStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(internetIn)
-        stackView.addArrangedSubview(internetInAmount)
-        return stackView
-    }()
-    
-    
-    private lazy var internetOutStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 0
-    
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(internetOut)
-        stackView.addArrangedSubview(internetOutAmount)
-        return stackView
-    }()
-    
+
     
 // GRAY BORDER
     private lazy var borderedView: BorderedView = {
         let view = BorderedView()
         return view
     }()
-
     
-    
+    private lazy var borderedView2: BorderedView = {
+        let view = BorderedView()
+        return view
+    }()
+   
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -340,23 +93,16 @@ class RoumingTableViewCell: UITableViewCell {
     private func setupCell() {
         
         self.contentStackView.addArrangedSubview(self.titleLabel)
-        contentStackView.addArrangedSubview(callsStackView)
-        contentStackView.addArrangedSubview(borderedView)
-        contentStackView.addArrangedSubview(smsStackView)
-        contentStackView.addArrangedSubview(borderedView)
-        contentStackView.addArrangedSubview(internetStackView)
+        contentStackView.addArrangedSubview(servicesStackView)
         
-        callsStackView.addArrangedSubview(headerStackView)
-        callsStackView.addArrangedSubview(cellInStackView)
-        callsStackView.addArrangedSubview(cellOutStackView)
+        servicesStackView.addArrangedSubview(cellCallItem)
         
-        smsStackView.addArrangedSubview(smsHeaderStackView)
-        smsStackView.addArrangedSubview(smsInStackView)
-        smsStackView.addArrangedSubview(smsOutStackView)
+        servicesStackView.addArrangedSubview(borderedView)
         
-        internetStackView.addArrangedSubview(internetHeaderStackView)
-        internetStackView.addArrangedSubview(internetInStackView)
-        internetStackView.addArrangedSubview(internetOutStackView)
+        servicesStackView.addArrangedSubview(smsItem)
+        
+        servicesStackView.addArrangedSubview(borderedView2)
+        servicesStackView.addArrangedSubview(internetItem)
         
         self.backView.addSubview(contentStackView)
         self.contentView.addSubview(backView)
@@ -367,57 +113,33 @@ class RoumingTableViewCell: UITableViewCell {
         super.updateConstraints()
         
         self.backView.snp.updateConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-8)
 
         }
         self.contentStackView.snp.updateConstraints { make in
             make.edges.equalToSuperview().inset(16)
         }
-        self.cellcallImageView.snp.updateConstraints { make in
-            make.width.equalTo(24)
+
+        self.borderedView.snp.updateConstraints { make in
+            make.height.equalTo(1)
+            make.horizontalEdges.equalToSuperview()
         }
-        self.headerStackView.snp.updateConstraints { make in
-            make.height.equalTo(24)
-        }
-//        self.borderedView.snp.updateConstraints { make in
-//            make.top.equalTo(smsImageView.snp.top).offset(16)
-//            make.height.equalTo(1)
-//        }
-        // sms stack
-        self.smsImageView.snp.updateConstraints { make in
-            make.width.equalTo(24)
-        }
-        self.smsHeaderStackView.snp.updateConstraints { make in
-            make.height.equalTo(24)
-        }
-        
-//        self.borderedView.snp.updateConstraints { make in
-//            make.top.equalTo(internetImageView.snp.top).offset(16)
-//            make.height.equalTo(1)
-//        }
-        // sms internet
-        self.internetHeaderStackView.snp.updateConstraints { make in
-            make.height.equalTo(24)
-        }
-        self.internetImageView.snp.updateConstraints { make in
-            make.width.equalTo(24)
+        self.borderedView2.snp.updateConstraints { make in
+            make.height.equalTo(1)
+            make.horizontalEdges.equalToSuperview()
         }
     }
     
     // Configure cell with data
-        func configure(with model: RoamingDetail) {
-            titleLabel.text = model.title
-        }
-}
+    func configure(with package: RoamingPackageModel) {
+        titleLabel.text = package.packageName
+        cellCallItem.configure(with: package.callSection)
+        smsItem.configure(with: package.smsSection)
+        internetItem.configure(with: package.internetSection)
+    }
 
-// Model struct for the data
-struct RoamingDetail {
-    let title: String
-    let subtitle: String
-    let detail: String
-    let iconName: String
-    let isFree: Bool
 }
 
 

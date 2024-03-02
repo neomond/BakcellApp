@@ -64,16 +64,16 @@ class CountrySearchView: UIView, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
         
-        searchView.snp.makeConstraints { make in
+        searchView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
         }
 
-        searchLabel.snp.makeConstraints { make in
+        searchLabel.snp.updateConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
         }
 
-        searchImageView.snp.makeConstraints { make in
+        searchImageView.snp.updateConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().inset(16)
             make.size.equalTo(20)

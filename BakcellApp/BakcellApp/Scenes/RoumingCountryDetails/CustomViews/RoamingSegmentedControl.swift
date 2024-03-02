@@ -42,9 +42,7 @@ final class RoamingSegmentedControl: UIView, ThemeableView {
     private func setupUI() {
         self.addSubview(segmentedControl)
         segmentedControl.snp.updateConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
+            make.edges.equalToSuperview()
         }
     }
     

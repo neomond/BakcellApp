@@ -12,14 +12,19 @@ protocol RoumingBusinessLogic {
     func load(request: Rouming.Load.Request)
     
     func loadRoamingCountries(request: Rouming.FetchRoamingCountries.Request)
+    
+    func getSelectedCountry(countryName: String)
 }
 
 protocol RoumingDataStore {
     
+    var countryName: String { get set }
     //var name: String { get set }
 }
 
 final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
+    var countryName = ""
+    
     
     var presenter: RoumingPresentationLogic?
     lazy var worker: RoumingWorkingLogic = RoumingWorker()
@@ -44,5 +49,7 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
         }
       
     }
-    
+    func getSelectedCountry(countryName: String) {
+        self.countryName = countryName
+    }
 }

@@ -27,7 +27,7 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(collectionView)
-        collectionView.snp.makeConstraints { make in
+        collectionView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
             make.height.equalTo(height)
         }

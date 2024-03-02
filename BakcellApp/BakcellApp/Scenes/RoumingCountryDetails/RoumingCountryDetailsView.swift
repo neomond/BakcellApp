@@ -18,14 +18,7 @@ final class RoumingCountryDetailsView: UIView, ThemeableView {
     
     
     private let roumingCountryCollectionView = RoumingCountryCollectionView()
-    
-   
-    private let roamingSegmentedControl: RoamingSegmentedControl = {
-        let control = RoamingSegmentedControl(titles: ["Öncədən ödənişli", "Fakturalı"])
-        return control
-    }()
-    
-    
+
     private lazy var roamingDetailsTableView: RoamingDetailsTableView = {
         let view = RoamingDetailsTableView()
         return view
@@ -54,7 +47,7 @@ final class RoumingCountryDetailsView: UIView, ThemeableView {
     private func addSubviews() {
         self.updateConstraints()
         self.addSubview(roumingCountryCollectionView)
-        self.addSubview(roamingSegmentedControl)
+//        self.addSubview(roamingSegmentedControl)
         self.addSubview(roamingDetailsTableView)
     }
     
@@ -68,13 +61,8 @@ final class RoumingCountryDetailsView: UIView, ThemeableView {
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.height.equalTo(54)
         }
-        roamingSegmentedControl.snp.updateConstraints { make in
-            make.leading.trailing.equalToSuperview()
-            make.top.equalTo(roumingCountryCollectionView.snp.bottom).offset(24)
-            make.height.equalTo(32)
-        }
         roamingDetailsTableView.snp.updateConstraints { make in
-            make.top.equalTo(roamingSegmentedControl.snp.bottom).offset(24)
+            make.top.equalTo(roumingCountryCollectionView.snp.bottom).offset(24)
             make.leading.bottom.equalToSuperview().offset(24)
             make.trailing.equalToSuperview().offset(-24)
         }

@@ -14,16 +14,19 @@ protocol RoumingCountryDetailsBusinessLogic {
 
 protocol RoumingCountryDetailsDataStore {
     
-    //var name: String { get set }
+    var countryName: String { get set }
 }
 
 final class RoumingCountryDetailsInteractor: RoumingCountryDetailsBusinessLogic, RoumingCountryDetailsDataStore {
+    
+   
+    
     
     var presenter: RoumingCountryDetailsPresentationLogic?
     lazy var worker: RoumingCountryDetailsWorkingLogic = RoumingCountryDetailsWorker()
     //var name: String = ""
   
-    
+    var countryName = ""
     // MARK: Business Logic
   
     func load(request: RoumingCountryDetails.Load.Request) {

@@ -130,11 +130,26 @@ class CellCallItem: UIView, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
         
+        self.callsStackView.snp.updateConstraints { make in
+            make.edges.equalToSuperview()
+        }
         self.cellcallImageView.snp.updateConstraints { make in
             make.width.equalTo(24)
         }
         self.headerStackView.snp.updateConstraints { make in
             make.height.equalTo(24)
         }
+    }
+}
+
+
+extension CellCallItem {
+    func configure(with item: CallSection) {
+        cellcallTitleLabel.text = item.title
+        cellcallImageView.image = UIImage(named: item.imageName)
+        cellIn.text = "Daxil olan"
+        cellInAmount.text = item.incomingCost
+        cellOut.text = "Çıxan"
+        cellOutAmount.text = item.outgoingCost
     }
 }

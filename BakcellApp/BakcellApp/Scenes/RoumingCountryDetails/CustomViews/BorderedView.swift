@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import BakcellUIKit
 
-class BorderedView: UIView {
+class BorderedView: UIView, ThemeableView {
+    
+    var theme: ThemeProvider = App.theme
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -15,14 +18,10 @@ class BorderedView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupBorder()
+        fatalError()
     }
 
     private func setupBorder() {
-        self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.gray.cgColor
-        self.layer.cornerRadius = 5.0 
-        self.clipsToBounds = true
+        self.backgroundColor = adaptiveColor(.grayPrimary)
     }
 }
