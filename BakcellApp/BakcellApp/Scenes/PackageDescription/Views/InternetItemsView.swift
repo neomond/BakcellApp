@@ -38,7 +38,7 @@ class InternetItemsView: UIView, ThemeableView {
     private lazy var itemImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "globe")
+        imageView.image = UIImage(named: "internet")
         return imageView
     }()
     

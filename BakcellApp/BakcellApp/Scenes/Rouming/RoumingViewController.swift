@@ -109,7 +109,7 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .internetPackages, .callAndSMSPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "internetPackagesCell", for: indexPath) as! InternetPackagesCell
-            
+            cell.delegate = self
             if sectionTitle == .internetPackages {
                 cell.cellType = .internet
             } else if sectionTitle == .callAndSMSPackages {
@@ -161,11 +161,16 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 
-
 extension RoumingViewController: TravelTableHeaderViewDelegate {
     func onCountrySelected(selectedCountryName: String) {
         self.interactor?.getSelectedCountry(countryName: selectedCountryName)
         self.router?.routeToCountryDetail()
     }
-    
 }
+
+extension RoumingViewController: InternetPackagesCellDelegate {
+    func onPackageSelected() {
+        router?.routeToRoumingPackageDetail()
+    }
+}
+

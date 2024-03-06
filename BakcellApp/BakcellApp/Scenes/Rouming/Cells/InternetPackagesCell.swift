@@ -8,8 +8,14 @@
 import UIKit
 import SnapKit
 
+protocol InternetPackagesCellDelegate: AnyObject {
+    func onPackageSelected()
+}
+
+
 class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-   
+    weak var delegate: InternetPackagesCellDelegate?
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -64,5 +70,8 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
         return CGSize(width: 167, height: height)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onPackageSelected()
+    }
 }
 

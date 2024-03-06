@@ -2,7 +2,7 @@
 //  RoamingSegmentedControl.swift
 //  BakcellApp
 //
-//  Created by Nazrin Atayeva on 26.02.24.
+//  Created by Nazrin Atayeva on 06.03.24.
 //
 
 import UIKit
@@ -14,10 +14,10 @@ protocol RoamingSegmentedControlDelegate: AnyObject {
 }
 
 final class RoamingSegmentedControl: UIView, ThemeableView {
+    var theme: ThemeProvider = App.theme
     
     weak var delegate: RoamingSegmentedControlDelegate?
     
-    var theme: ThemeProvider = App.theme
     
     private lazy var segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: self.titles)
@@ -42,7 +42,9 @@ final class RoamingSegmentedControl: UIView, ThemeableView {
     private func setupUI() {
         self.addSubview(segmentedControl)
         segmentedControl.snp.updateConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
     }
     
@@ -66,7 +68,8 @@ final class RoamingSegmentedControl: UIView, ThemeableView {
         segmentedControl.setBackgroundImage(normalBackgroundImage, for: .normal, barMetrics: .default)
         segmentedControl.setBackgroundImage(selectedBackgroundImage, for: .selected, barMetrics: .default)
         segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-        
+  
+
     }
     
     

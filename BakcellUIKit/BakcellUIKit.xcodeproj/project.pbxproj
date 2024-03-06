@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0522092B98505C0082DB64 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522082B98505C0082DB64 /* AppFonts.swift */; };
 		7A8E57372B81FC8700A31918 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57362B81FC8700A31918 /* Colors.swift */; };
 		7A8E57392B81FCB300A31918 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E57382B81FCB300A31918 /* AppTheme.swift */; };
 		7A8E573C2B81FDA600A31918 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8E573B2B81FDA600A31918 /* Colors.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A0522082B98505C0082DB64 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		7A8E57362B81FC8700A31918 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7A8E57382B81FCB300A31918 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		7A8E573B2B81FDA600A31918 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A0522072B9850500082DB64 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A0522082B98505C0082DB64 /* AppFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7A8E57352B81FC6800A31918 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		7AF915582B7F2E8B00C8E149 /* BakcellUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7A0522072B9850500082DB64 /* Fonts */,
 				7A8E57352B81FC6800A31918 /* Colors */,
 				7AF915592B7F2E8B00C8E149 /* BakcellUIKit.h */,
 				7A8E57382B81FCB300A31918 /* AppTheme.swift */,
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0522092B98505C0082DB64 /* AppFonts.swift in Sources */,
 				7A8E57372B81FC8700A31918 /* Colors.swift in Sources */,
 				7A8E57392B81FCB300A31918 /* AppTheme.swift in Sources */,
 			);

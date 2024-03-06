@@ -37,7 +37,7 @@ final class TabBarController: UITabBarController, ThemeableViewController {
         let dashboardView = MainNavigation(rootViewController: DashboardConfigurator.configure(dashboardVC))
         dashboardView.tabBarItem = UITabBarItem()
         dashboardView.tabBarItem.title = "Dashboard"
-        dashboardView.tabBarItem.image = UIImage.checkmark
+        dashboardView.tabBarItem.image = UIImage.done
 //        homeView.tabBarItem.titlePositionAdjustment = .init(horizontal: 0, vertical: -3)
         
         

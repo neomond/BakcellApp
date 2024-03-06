@@ -19,6 +19,7 @@ public enum ColorStyle: String, CaseIterable {
     case grayInput      = "GrayInput"
     case grayText       = "GrayText"
     case green          = "Green"
+    case borderTable    = "BorderTable"
 }
 
 extension ColorStyle {
