@@ -68,5 +68,85 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1A0277D-714C-4A50-A68B-956BC69E079F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/PackageDescription/PackageDescriptionRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "navigateToSupportedCountries(source:destination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EC8BF5B-B050-451F-ABE5-AA14E36D5C12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/PackageDescription/PackageDescriptionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "onCheckCountryBtnTap()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9EC8BF5B-B050-451F-ABE5-AA14E36D5C12 - 92ff7b1e7c7e59a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.PackageDescriptionView.onCheckCountryBtnTap() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nazrinatayeva/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/PackageDescription/PackageDescriptionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "9EC8BF5B-B050-451F-ABE5-AA14E36D5C12 - 92ff7b1e7c7e59a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.PackageDescriptionView.onCheckCountryBtnTap() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nazrinatayeva/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/PackageDescription/PackageDescriptionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39B8B4BF-B94E-4A58-A3F3-EF30907A75D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/PackageDescription/PackageDescriptionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "onCheckCountryBtnTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

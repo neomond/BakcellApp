@@ -57,5 +57,9 @@ extension PackageDescriptionViewController: PackageDescriptionDisplayLogic {
 // MARK: - View Delegate
 
 extension PackageDescriptionViewController: PackageDescriptionViewDelegate {
-    
+    func onCheckCountryBtnTapped() {
+        router?.routeToSupportedCountries()
+    }
 }
+
+

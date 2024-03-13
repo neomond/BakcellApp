@@ -10,8 +10,7 @@ import BakcellUIKit
 
 
 class PriceComparisonViewCell: UIView, ThemeableView {
-//    static var reuseIdentifier = "PriceComparisonViewCell"
-//
+//  static var reuseIdentifier = "PriceComparisonViewCell"
     
     var theme: ThemeProvider = App.theme
     
@@ -145,7 +144,6 @@ class PriceComparisonViewCell: UIView, ThemeableView {
         self.contentHStackView.snp.updateConstraints { make in
             make.horizontalEdges.equalToSuperview()
             make.verticalEdges.equalToSuperview()
-
         }
         
         self.priceTableHeaders.snp.updateConstraints { make in

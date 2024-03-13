@@ -13,11 +13,7 @@ public protocol SegmentedControlDelegate: AnyObject {
 }
 
 public extension SegmentedControlDelegate {
-    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
+    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) { }
 
-    }
-
-    func segmentedControl(_ segmentedControl: SegmentedControl, didLongPressIndex longPressIndex: Int) {
-
-    }
+    func segmentedControl(_ segmentedControl: SegmentedControl, didLongPressIndex longPressIndex: Int) { }
 }

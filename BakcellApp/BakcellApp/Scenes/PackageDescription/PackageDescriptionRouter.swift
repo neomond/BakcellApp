@@ -9,7 +9,7 @@ import UIKit
 
 @objc protocol PackageDescriptionRoutingLogic {
     
-    //func routeToSomewhere()
+   func routeToSupportedCountries()
 }
 
 protocol PackageDescriptionDataPassing {
@@ -24,27 +24,25 @@ final class PackageDescriptionRouter: NSObject, PackageDescriptionRoutingLogic, 
     
     // MARK: Routing
 
-//    func routeToSomewhere() {
-//        let destinationVC = SomewhereViewController()
-//        SomewhereConfigurator.configure(destinationVC)
-//
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//
-//        navigateToSomewhere(source: viewController!, destination: destinationVC)
-//    }
+    func routeToSupportedCountries() {
+        let destinationVC = SupportedCountriesViewController()
+        SupportedCountriesConfigurator.configure(destinationVC)
+
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToSupportedCountries(source: dataStore!, destination: &destinationDS)
+
+        navigateToSupportedCountries(source: viewController!, destination: destinationVC)
+    }
 
     
     // MARK: Navigation
 
-//    func navigateToSomewhere(source: PackageDescriptionViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
+    func navigateToSupportedCountries(source: PackageDescriptionViewController, destination: SupportedCountriesViewController) {
+        source.show(destination, sender: nil)
+    }
 
     
     // MARK: Passing data
 
-//    func passDataToSomewhere(source: PackageDescriptionDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func passDataToSupportedCountries(source: PackageDescriptionDataStore, destination: inout SupportedCountriesDataStore) { }
 }

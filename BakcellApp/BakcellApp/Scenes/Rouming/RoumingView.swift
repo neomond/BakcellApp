@@ -28,6 +28,8 @@ final class RoumingView: UIView, ThemeableView {
     }()
     
     
+    //MARK: Init
+    
     init() {
         super.init(frame: .zero)
         
@@ -42,7 +44,6 @@ final class RoumingView: UIView, ThemeableView {
     }
     
     override func updateConstraints() {
-        
         super.updateConstraints()
     }
     

@@ -53,8 +53,8 @@ class CountryTableViewCell: UITableViewCell, ThemeableView {
     }()
     
     private lazy var checkmarkImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(systemName: "done"))
-        imageView.tintColor = .green
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: AppAssets.done.rawValue)
         return imageView
     }()
     

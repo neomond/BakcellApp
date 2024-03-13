@@ -8,7 +8,9 @@
 import UIKit
 import BakcellUIKit
 
-protocol PackageDescriptionViewDelegate: AnyObject { }
+protocol PackageDescriptionViewDelegate: AnyObject {
+    func onCheckCountryBtnTapped()
+}
 
 final class PackageDescriptionView: UIView, ThemeableView {
     
@@ -43,6 +45,8 @@ final class PackageDescriptionView: UIView, ThemeableView {
     
     private lazy var checkCountryButton: CheckCountryButton = {
         let button = CheckCountryButton()
+
+        button.addTarget(self, action: #selector(onCheckCountryBtnTap), for: .touchUpInside)
         return button
     }()
     
@@ -111,7 +115,7 @@ final class PackageDescriptionView: UIView, ThemeableView {
         self.contentStackView.addArrangedSubview(self.checkCountryButton)
         self.contentStackView.addArrangedSubview(self.aboutView)
         self.contentStackView.addArrangedSubview(self.notesView)
-        
+        self.updateConstraints()
     }
     
     
@@ -133,10 +137,10 @@ final class PackageDescriptionView: UIView, ThemeableView {
             make.edges.equalToSuperview().inset(16)
         }
         self.fixedActivateButtonView.snp.updateConstraints { make in
-            make.left.right.bottom.equalToSuperview()
+            make.leading.trailing.bottom.equalToSuperview()
         }
         self.paddingView.snp.updateConstraints { make in
-            make.left.right.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(fixedActivateButtonView.snp.top)
             make.height.equalTo(24)
         }
@@ -145,4 +149,9 @@ final class PackageDescriptionView: UIView, ThemeableView {
         }
     }
     
+    
+    @objc func onCheckCountryBtnTap() {
+        print("----------Tapping on country button--------")
+        delegate?.onCheckCountryBtnTapped()
+    }
 }

@@ -7,32 +7,24 @@
 
 import UIKit
 
-protocol SupportedCountriesViewDelegate: AnyObject {
-    
-}
+protocol SupportedCountriesViewDelegate: AnyObject { }
 
 final class SupportedCountriesView: UIView, UITableViewDataSource {
     
     weak var delegate: SupportedCountriesViewDelegate?
     
     private var countries: [CountryInfo] = [
-        CountryInfo(name: "Türkiya", providers: "Vodafone, Türkcell, Türkcel", flagImage: UIImage(named: "turkey")!, isSupported: true),
-        CountryInfo(name: "Rusiya", providers: "Vodafone, MTC, Beeline", flagImage: UIImage(named: "russia")!, isSupported: true),
-        CountryInfo(name: "Türkiya", providers: "Vodafone, Türkcell, Türkcel", flagImage: UIImage(named: "turkey")!, isSupported: true),
-        CountryInfo(name: "Rusiya", providers: "Vodafone, MTC, Beeline", flagImage: UIImage(named: "russia")!, isSupported: true)
-        
+        CountryInfo(name: "Türkiya", providers: "Vodafone, Türkcell, Türkcel", flagImage: UIImage(named: "turkiye")!, isSupported: true),
+        CountryInfo(name: "Rusiya", providers: "Vodafone, MTC, Beeline", flagImage: UIImage(named: "rusiya")!, isSupported: true),
+        CountryInfo(name: "Türkiya", providers: "Vodafone, Türkcell, Türkcel", flagImage: UIImage(named: "turkiye")!, isSupported: true),
+        CountryInfo(name: "Rusiya", providers: "Vodafone, MTC, Beeline", flagImage: UIImage(named: "rusiya")!, isSupported: true)
     ]
     
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.identifier)
+    lazy var countriesTableView: RoamingCountriesTableView = {
+        let tableView = RoamingCountriesTableView()
         tableView.dataSource = self
         return tableView
     }()
-    
     
     init() {
         super.init(frame: .zero)
@@ -70,16 +62,15 @@ final class SupportedCountriesView: UIView, UITableViewDataSource {
     
     private func addSubviews() {
         //self.updateConstraints()
-        self.addSubview(tableView)
+        self.addSubview(countriesTableView)
      
     }
     
     private func addConstraints(){
-        self.tableView.snp.updateConstraints { make in
+        self.countriesTableView.snp.updateConstraints { make in
             make.top.equalToSuperview().offset(16)
-            make.left.right.bottom.equalToSuperview()
+            make.leading.trailing.bottom.equalToSuperview()
         }
-
     }
     
     private func setupUI() {

@@ -77,6 +77,7 @@ class CheckCountryButton: UIButton, ThemeableView {
     // MARK: - Setup Methods
     private func setupSubviews() {
         addSubview(containerView)
+   
         containerView.addSubview(directionIconBackgroundView)
         directionIconBackgroundView.addSubview(iconImageView)
         
@@ -86,6 +87,8 @@ class CheckCountryButton: UIButton, ThemeableView {
         containerView.addSubview(textStackView)
         
         containerView.addSubview(searchIconImageView)
+        
+        self.updateConstraints()
     }
     
     private func setupConstraints() {
@@ -94,7 +97,7 @@ class CheckCountryButton: UIButton, ThemeableView {
         }
         
         directionIconBackgroundView.snp.updateConstraints { make in
-            make.left.equalTo(containerView).offset(16)
+            make.leading.equalTo(containerView).offset(16)
             make.centerY.equalTo(containerView)
             make.width.height.equalTo(40)
         }
@@ -106,15 +109,28 @@ class CheckCountryButton: UIButton, ThemeableView {
         
         let textStackView = containerView.subviews.first { $0 is UIStackView } as? UIStackView
         textStackView?.snp.updateConstraints { make in
-            make.left.equalTo(directionIconBackgroundView.snp.right).offset(12)
+            make.leading.equalTo(directionIconBackgroundView.snp.trailing).offset(12)
             make.centerY.equalTo(containerView)
         }
         
         searchIconImageView.snp.updateConstraints { make in
-            make.right.equalTo(containerView).offset(-16)
+            make.trailing.equalTo(containerView).offset(-16)
             make.centerY.equalTo(containerView)
             make.width.height.equalTo(24)
         }
     }
+    
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+           let convertedPoint = self.convert(point, to: self)
+
+           // If the point is inside the button's bounds, return the button
+           if self.bounds.contains(convertedPoint) {
+               return self
+           }
+
+           // If not, return nil to allow the system to find the appropriate view
+           return nil
+       }
 }
 

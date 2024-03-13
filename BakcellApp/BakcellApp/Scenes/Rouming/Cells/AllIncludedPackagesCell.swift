@@ -231,7 +231,7 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
         
         priceLabel.snp.updateConstraints { make in
             make.bottom.equalTo(infoStackView.snp.top).offset(-16)
-            make.left.equalTo(stackView.snp.left).offset(16)
+            make.leading.equalTo(stackView.snp.leading).offset(16)
             make.height.equalTo(32)
         }
         

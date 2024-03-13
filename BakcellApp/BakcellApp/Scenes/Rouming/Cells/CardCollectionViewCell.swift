@@ -179,53 +179,53 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
         containerView.snp.updateConstraints { make in
-            make.left.top.equalToSuperview().inset(16)
-            make.right.equalToSuperview().inset(-12)
+            make.leading.top.equalToSuperview().inset(16)
+            make.trailing.equalToSuperview().inset(-12)
             make.bottom.equalToSuperview()
         }
         
         stackView.snp.updateConstraints { make in
             make.top.equalTo(containerView.snp.top).offset(16)
-            make.left.equalTo(containerView.snp.left).offset(16)
-            make.right.equalTo(containerView.snp.right).offset(-16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
+            make.trailing.equalTo(containerView.snp.trailing).offset(-16)
         }
         
         dataAmountLabel.snp.updateConstraints { make in
             make.top.equalTo(containerView.snp.top).offset(16)
-            make.left.equalTo(containerView.snp.left).offset(16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
         }
         
         dataUnitLabel.snp.updateConstraints { make in
             make.centerY.equalTo(dataAmountLabel.snp.centerY).offset(4)
-            make.left.equalTo(dataAmountLabel.snp.right).offset(4)
+            make.leading.equalTo(dataAmountLabel.snp.trailing).offset(4)
         }
         
         whatsappImageView.snp.updateConstraints { make in
             make.top.equalTo(dataAmountLabel.snp.bottom).offset(8)
-            make.left.equalTo(containerView.snp.left).offset(16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
             make.size.equalTo(CGSize(width: 20, height: 20))
         }
         
         freeLabel.snp.updateConstraints { make in
             make.centerY.equalTo(whatsappImageView.snp.centerY)
-            make.left.equalTo(whatsappImageView.snp.right).offset(8)
+            make.leading.equalTo(whatsappImageView.snp.trailing).offset(8)
         }
         
         priceLabel.snp.updateConstraints { make in
             make.bottom.equalTo(internetLabel.snp.top).offset(-12)
-            make.left.equalTo(containerView.snp.left).offset(16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
         }
         
         internetLabel.snp.updateConstraints { make in
             make.top.equalTo(priceLabel.snp.bottom).offset(16)
-            make.left.equalTo(containerView.snp.left).offset(16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
             make.bottom.equalToSuperview().inset(16)
             make.width.equalTo(55)
             make.height.equalTo(24)
         }
         
         addAction.snp.updateConstraints { make in
-            make.right.equalTo(containerView.snp.right).offset(-16)
+            make.trailing.equalTo(containerView.snp.trailing).offset(-16)
             make.bottom.equalTo(containerView.snp.bottom).offset(-16)
             make.size.equalTo(CGSize(width: 24, height: 24))
         }
