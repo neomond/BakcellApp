@@ -13,6 +13,13 @@
 		7A05223C2B9ED0640082DB64 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05223B2B9ED0640082DB64 /* Response.swift */; };
 		7A05223E2B9ED1B60082DB64 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05223D2B9ED1B60082DB64 /* Service.swift */; };
 		7A0522402B9ED1F30082DB64 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05223F2B9ED1F30082DB64 /* Result.swift */; };
+		7A05224B2BA1C6C10082DB64 /* SmsCallPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05224A2BA1C6C10082DB64 /* SmsCallPackages.swift */; };
+		7A0522512BA1CE3D0082DB64 /* AllPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522502BA1CE3D0082DB64 /* AllPackages.swift */; };
+		7A0522572BA1D9880082DB64 /* InternetPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522562BA1D9880082DB64 /* InternetPackages.swift */; };
+		7A05225E2BA1DCD40082DB64 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05225D2BA1DCD40082DB64 /* Countries.swift */; };
+		7A0522642BA802E30082DB64 /* RoumingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522632BA802E30082DB64 /* RoumingAPI.swift */; };
+		7A0522662BA802F00082DB64 /* RoumingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522652BA802F00082DB64 /* RoumingService.swift */; };
+		7A05226F2BA807300082DB64 /* RoumingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A05226E2BA807300082DB64 /* RoumingResponse.swift */; };
 		7AF915462B7F2E6400C8E149 /* BakcellNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF915452B7F2E6400C8E149 /* BakcellNetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -22,6 +29,13 @@
 		7A05223B2B9ED0640082DB64 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7A05223D2B9ED1B60082DB64 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7A05223F2B9ED1F30082DB64 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7A05224A2BA1C6C10082DB64 /* SmsCallPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallPackages.swift; sourceTree = "<group>"; };
+		7A0522502BA1CE3D0082DB64 /* AllPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPackages.swift; sourceTree = "<group>"; };
+		7A0522562BA1D9880082DB64 /* InternetPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackages.swift; sourceTree = "<group>"; };
+		7A05225D2BA1DCD40082DB64 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		7A0522632BA802E30082DB64 /* RoumingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingAPI.swift; sourceTree = "<group>"; };
+		7A0522652BA802F00082DB64 /* RoumingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingService.swift; sourceTree = "<group>"; };
+		7A05226E2BA807300082DB64 /* RoumingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingResponse.swift; sourceTree = "<group>"; };
 		7AF915422B7F2E6400C8E149 /* BakcellNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BakcellNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF915452B7F2E6400C8E149 /* BakcellNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BakcellNetworkKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +55,7 @@
 		7A05222E2B9ECCF60082DB64 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7A0522462BA1C6090082DB64 /* Roaming */,
 				7A0522312B9ECD1D0082DB64 /* Base */,
 				7A0522302B9ECD110082DB64 /* Service */,
 			);
@@ -87,6 +102,44 @@
 				7A05223B2B9ED0640082DB64 /* Response.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		7A0522462BA1C6090082DB64 /* Roaming */ = {
+			isa = PBXGroup;
+			children = (
+				7A0522672BA803200082DB64 /* Response */,
+				7A0522632BA802E30082DB64 /* RoumingAPI.swift */,
+				7A0522652BA802F00082DB64 /* RoumingService.swift */,
+				7A05226E2BA807300082DB64 /* RoumingResponse.swift */,
+			);
+			path = Roaming;
+			sourceTree = "<group>";
+		};
+		7A0522672BA803200082DB64 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7A05226D2BA803CA0082DB64 /* Package */,
+				7A05226C2BA803C30082DB64 /* Country */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		7A05226C2BA803C30082DB64 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				7A05225D2BA1DCD40082DB64 /* Countries.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		7A05226D2BA803CA0082DB64 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				7A05224A2BA1C6C10082DB64 /* SmsCallPackages.swift */,
+				7A0522562BA1D9880082DB64 /* InternetPackages.swift */,
+				7A0522502BA1CE3D0082DB64 /* AllPackages.swift */,
+			);
+			path = Package;
 			sourceTree = "<group>";
 		};
 		7AF915382B7F2E6400C8E149 = {
@@ -203,9 +256,16 @@
 			files = (
 				7A0522382B9ED0000082DB64 /* BaseService.swift in Sources */,
 				7A0522402B9ED1F30082DB64 /* Result.swift in Sources */,
+				7A0522662BA802F00082DB64 /* RoumingService.swift in Sources */,
 				7A05223E2B9ED1B60082DB64 /* Service.swift in Sources */,
+				7A05226F2BA807300082DB64 /* RoumingResponse.swift in Sources */,
+				7A0522642BA802E30082DB64 /* RoumingAPI.swift in Sources */,
+				7A0522572BA1D9880082DB64 /* InternetPackages.swift in Sources */,
+				7A0522512BA1CE3D0082DB64 /* AllPackages.swift in Sources */,
 				7A05223C2B9ED0640082DB64 /* Response.swift in Sources */,
+				7A05224B2BA1C6C10082DB64 /* SmsCallPackages.swift in Sources */,
 				7A0522332B9ECD3B0082DB64 /* Connectivity.swift in Sources */,
+				7A05225E2BA1DCD40082DB64 /* Countries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import Foundation
 import BakcellUIKit
+import BakcellNetworkKit
 
 
 let App = AppContainer()
@@ -15,7 +16,7 @@ final class AppContainer {
     
     let router = AppRouter()
     
-//  let service = Service()
+    let service = Service()
 
     let theme = AppTheme()
 }

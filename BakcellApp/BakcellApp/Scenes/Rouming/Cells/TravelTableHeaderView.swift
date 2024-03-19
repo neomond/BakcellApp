@@ -20,7 +20,7 @@ class TravelTableHeaderView: UIView, ThemeableView {
   
     weak var delegate: TravelTableHeaderViewDelegate?
     
-    var items: [String] = [] {
+    var items: [String: String] = [:] {
         didSet {
             self.destinationsCollectionView.reloadData()
             self.destinationsCollectionView.invalidateIntrinsicContentSize()
@@ -40,8 +40,7 @@ class TravelTableHeaderView: UIView, ThemeableView {
     
     private lazy var mapImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "map") // Create AppFonts enum and add image names there
-//        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "map")
         return imageView
     }()
     
@@ -91,7 +90,6 @@ class TravelTableHeaderView: UIView, ThemeableView {
     
     
     private func setupViews() {
-
         containerView.addSubview(mapImageView)
         containerView.addSubview(mapLabel)
         containerView.addSubview(countrySearchView)
@@ -147,14 +145,15 @@ extension TravelTableHeaderView: UICollectionViewDelegate, UICollectionViewDataS
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DestinationCollectionViewCell.reuseIdentifier, for: indexPath) as? DestinationCollectionViewCell else {
             return UICollectionViewCell()
         }
+        print(self.items)
         
-        cell.data = self.items[indexPath.row]
-        print(self.items[indexPath.row])
+        cell.data = self.items.values.map { $0 }[indexPath.row]
+//        print(self.items[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.onCountrySelected(selectedCountryName: self.items[indexPath.row])
+        delegate?.onCountrySelected(selectedCountryName: self.items.values.map { $0 }[indexPath.row])
         
     }
 }

@@ -11,7 +11,7 @@ protocol RoumingPresentationLogic {
     
     func presentLoad(response: Rouming.Load.Response)
     
-    func presentRoamingCountries(response: Rouming.FetchRoamingCountries.Response)
+    func presentRoaming(response: Rouming.FetchRouming.Response)
 }
 
 
@@ -27,11 +27,10 @@ final class RoumingPresenter: RoumingPresentationLogic {
         viewController?.displayLoad(viewModel: viewModel)
     }
     
-    func presentRoamingCountries(response: Rouming.FetchRoamingCountries.Response) {
-        guard let countries = response.countries else {
-            return
-        }
-        let viewModel = Rouming.FetchRoamingCountries.ViewModel(countries: countries)
-        viewController?.displayRoamingCountries(viewModel: viewModel)
+    func presentRoaming(response: Rouming.FetchRouming.Response) {
+       
+        guard let response = response.roumingResponse else { return }
+        let viewModel = Rouming.FetchRouming.ViewModel(roumingModel: response.convertToModel())
+        viewController?.displayRoaming(viewModel: viewModel)
     }
 }

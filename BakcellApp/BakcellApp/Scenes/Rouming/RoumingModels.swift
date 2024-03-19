@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BakcellNetworkKit
 
 enum Rouming {
     
@@ -20,15 +21,15 @@ enum Rouming {
         struct ViewModel { }
     }
     
-    enum FetchRoamingCountries {
+    enum FetchRouming {
         struct Request { }
         
         struct Response {
-            let countries: [String]?
+            let roumingResponse: RoumingPackagesResponse?
         }
         
         struct ViewModel {
-            let countries: [String]
+            let roumingModel: RoumingPackagesModel
         }
     }
 }
@@ -67,7 +68,6 @@ struct CardCellModel {
 struct AllIncludedModel {
     let title: String
     let price: String
-//    let period: String
     let internetQuota: String
     let callQuota: String
     let smsQuota: String

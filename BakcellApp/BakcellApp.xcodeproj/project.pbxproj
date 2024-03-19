@@ -36,6 +36,7 @@
 		7A0522042B984E4A0082DB64 /* Extension + PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522032B984E4A0082DB64 /* Extension + PageViewController.swift */; };
 		7A0522062B984FF20082DB64 /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522052B984FF20082DB64 /* AppAssets.swift */; };
 		7A0522452B9F73E10082DB64 /* RoamingCountriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522442B9F73E10082DB64 /* RoamingCountriesTableView.swift */; };
+		7A0522722BA851310082DB64 /* RoumingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522712BA851310082DB64 /* RoumingModel.swift */; };
 		7A2DC9BB2B825DD100846D84 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2DC9BA2B825DD100846D84 /* SnapKit */; };
 		7A2DC9BF2B82772800846D84 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */; };
 		7A2DC9CE2B836CE000846D84 /* InternetPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */; };
@@ -159,6 +160,7 @@
 		7A0522032B984E4A0082DB64 /* Extension + PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + PageViewController.swift"; sourceTree = "<group>"; };
 		7A0522052B984FF20082DB64 /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		7A0522442B9F73E10082DB64 /* RoamingCountriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingCountriesTableView.swift; sourceTree = "<group>"; };
+		7A0522712BA851310082DB64 /* RoumingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingModel.swift; sourceTree = "<group>"; };
 		7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackagesCell.swift; sourceTree = "<group>"; };
 		7A2DC9CF2B83728600846D84 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -337,6 +339,14 @@
 				7A0522442B9F73E10082DB64 /* RoamingCountriesTableView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7A0522702BA851140082DB64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A0522712BA851310082DB64 /* RoumingModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7A2DC9BC2B826EF700846D84 /* Views */ = {
@@ -591,6 +601,7 @@
 				7A8E573E2B82345E00A31918 /* RoumingWorker.swift */,
 				7A8E573F2B82345E00A31918 /* RoumingRouter.swift */,
 				7A8E57402B82345E00A31918 /* RoumingModels.swift */,
+				7A0522702BA851140082DB64 /* Models */,
 				7A8E57412B82345E00A31918 /* RoumingViewController.swift */,
 				7A8E57422B82345E00A31918 /* RoumingInteractor.swift */,
 				7A8E57432B82345E00A31918 /* RoumingView.swift */,
@@ -722,6 +733,7 @@
 				7A8E57212B81F92000A31918 /* TabBarViewController.swift in Sources */,
 				7A30764E2B866E6700A080CE /* CollectionViewCenteredFlowLayout.swift in Sources */,
 				7A32905B2B91A60C00FCC3D3 /* SupportedCountriesWorker.swift in Sources */,
+				7A0522722BA851310082DB64 /* RoumingModel.swift in Sources */,
 				7A2DC9CE2B836CE000846D84 /* InternetPackagesCell.swift in Sources */,
 				7A3290602B91A60C00FCC3D3 /* SupportedCountriesView.swift in Sources */,
 				7A0521FF2B984D160082DB64 /* RoumingCountryDetailViewController.swift in Sources */,

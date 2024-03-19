@@ -43,14 +43,6 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     }()
     
     
-    private lazy var dataUnitLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.font = UIFont.boldSystemFont(ofSize: 22)
-        return label
-    }()
-    
-    
     private lazy var freeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -71,24 +63,10 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        
-        let fullPrice = "3.00 ₼ "
-        let timePeriod = "/ Gün"
-        
         let fullPriceAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.boldSystemFont(ofSize: 17),
             .foregroundColor: adaptiveColor(.black)
         ]
-        let attributedString = NSMutableAttributedString(string: fullPrice, attributes: fullPriceAttributes)
-        
-        let timePeriodAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 17),
-            .foregroundColor: adaptiveColor(.grayInput)
-        ]
-        let timePeriodAttributedString = NSAttributedString(string: timePeriod, attributes: timePeriodAttributes)
-        
-        attributedString.append(timePeriodAttributedString)
-        label.attributedText = attributedString
         return label
     }()
 
@@ -118,36 +96,19 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     }()
     
     
-    func configureCell(type: PackageCellType, dataAmount: String, priceText: String, priceTimePeriod: String, labelText: String) {
+    func configureCell(type: PackageCellType, dataAmount: String, priceTimePeriod: String, labelText: String) {
        
         let isInternetPackage = type == .internet
         whatsappImageView.isHidden = !isInternetPackage
         freeLabel.isHidden = !isInternetPackage
 
-        dataUnitLabel.text = isInternetPackage ? "MB" : "dəq"
-        
         dataAmountLabel.text = dataAmount
         
         internetLabel.text = labelText
-
-        let fullPriceAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.boldSystemFont(ofSize: 17),
-            .foregroundColor: adaptiveColor(.black)
-        ]
-        let attributedString = NSMutableAttributedString(string: priceText, attributes: fullPriceAttributes)
         
-        let timePeriodAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 17),
-            .foregroundColor:  adaptiveColor(.grayInput)
-        ]
-        let timePeriodAttributedString = NSAttributedString(string: priceTimePeriod, attributes: timePeriodAttributes)
-        
-        attributedString.append(timePeriodAttributedString)
-        priceLabel.attributedText = attributedString
-        
+        priceLabel.text = priceTimePeriod
     }
 
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -165,7 +126,6 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         containerView.addSubview(stackView)
         
         containerView.addSubview(dataAmountLabel)
-        containerView.addSubview(dataUnitLabel)
         containerView.addSubview(freeLabel)
         containerView.addSubview(whatsappImageView)
         containerView.addSubview(priceLabel)
@@ -193,11 +153,6 @@ class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
         dataAmountLabel.snp.updateConstraints { make in
             make.top.equalTo(containerView.snp.top).offset(16)
             make.leading.equalTo(containerView.snp.leading).offset(16)
-        }
-        
-        dataUnitLabel.snp.updateConstraints { make in
-            make.centerY.equalTo(dataAmountLabel.snp.centerY).offset(4)
-            make.leading.equalTo(dataAmountLabel.snp.trailing).offset(4)
         }
         
         whatsappImageView.snp.updateConstraints { make in

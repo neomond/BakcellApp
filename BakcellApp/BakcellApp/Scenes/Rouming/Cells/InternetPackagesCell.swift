@@ -16,6 +16,19 @@ protocol InternetPackagesCellDelegate: AnyObject {
 class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     weak var delegate: InternetPackagesCellDelegate?
     
+    var internetPackages: [InternetPackagesItemModel]? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    
+    var smsPackages: [SMSCallPackagesItemModel]? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -45,23 +58,39 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        switch self.cellType {
+        case .internet:
+            self.internetPackages?.count ?? 0
+        case .smsAndCall:
+            self.smsPackages?.count ?? 0
+        }
     }
     
     var cellType: PackageCellType = .internet
     var height: CGFloat{
         return cellType == .internet ? 190 : 150
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
         }
         
-        let dataAmount = cellType   == .internet ? "1000" : "100"
-        let priceText = cellType    == .internet  ? "3.00 ₼" : "50.00 ₼"
-        let priceTimePeriod = cellType == .internet ? " / Gün" : " / Ay"
-        let labelText = cellType == .internet ? "Internet" : "Zəng"
-        cell.configureCell(type: cellType, dataAmount: dataAmount, priceText: priceText, priceTimePeriod: priceTimePeriod, labelText: labelText)
+        switch self.cellType {
+        case .internet:
+            guard let model = self.internetPackages?[indexPath.row]  else {
+                return UICollectionViewCell()
+            }
+            cell.configureCell(type: cellType, dataAmount: model.title, priceTimePeriod: model.period, labelText: model.type)
+            
+        case .smsAndCall:
+            
+            guard let model = self.smsPackages?[indexPath.row]  else {
+                return UICollectionViewCell()
+            }
+            cell.configureCell(type: cellType, dataAmount: model.title, priceTimePeriod: model.period, labelText: model.type)
+        }
+    
         return cell
     }
     

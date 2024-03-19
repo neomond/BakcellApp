@@ -6,22 +6,31 @@
 //
 
 import UIKit
+import BakcellNetworkKit
 
 protocol RoumingWorkingLogic {
-    func fetchRoamingCountries(completion: @escaping ([String]?) -> Void)
+
+    func fetchRoaming(completion: @escaping (RoumingPackagesResponse?) -> Void)
 }
 
 final class RoumingWorker: RoumingWorkingLogic {
-
+    
+    
     // MARK: - Private Properties
     
-//    private let service: ServiceProtocol = App.service
-
+    private let service: ServiceProtocol = App.service
+    
     
     // MARK: - Working Logic
-    func fetchRoamingCountries(completion: @escaping ([String]?) -> Void) {
-        let countries = ["Turkiye", "Rusiya", "Almaniya", "Qazaxistan", "Cexiya", "Ispania", "Italiya"]
-        completion(countries)
+    func fetchRoaming(completion: @escaping (RoumingPackagesResponse?) -> Void) {
+        service.rouming.getRouming { result in
+            switch result {
+            case .success(let data):
+                completion(data)
+            default:
+                completion(nil)
+            }
+        }
     }
     
 }

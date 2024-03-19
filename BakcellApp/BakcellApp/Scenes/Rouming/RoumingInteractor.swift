@@ -11,7 +11,7 @@ protocol RoumingBusinessLogic {
     
     func load(request: Rouming.Load.Request)
     
-    func loadRoamingCountries(request: Rouming.FetchRoamingCountries.Request)
+    func loadRoaming(request: Rouming.FetchRouming.Request)
     
     func getSelectedCountry(countryName: String)
 }
@@ -38,14 +38,13 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
         presenter?.presentLoad(response: response)
     }
     
-    func loadRoamingCountries(request: Rouming.FetchRoamingCountries.Request) {
-        
-        worker.fetchRoamingCountries { [weak self] data in
+    func loadRoaming(request: Rouming.FetchRouming.Request) {
+        worker.fetchRoaming { [weak self] data in
             guard let self = self else {
                 return
             }
-            let response = Rouming.FetchRoamingCountries.Response(countries: data)
-            self.presenter?.presentRoamingCountries(response: response)
+            let response = Rouming.FetchRouming.Response(roumingResponse: data)
+            self.presenter?.presentRoaming(response: response)
         }
       
     }

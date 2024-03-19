@@ -11,7 +11,7 @@ protocol RoumingDisplayLogic: AnyObject {
     
     func displayLoad(viewModel: Rouming.Load.ViewModel)
     
-    func displayRoamingCountries(viewModel: Rouming.FetchRoamingCountries.ViewModel)
+    func displayRoaming(viewModel: Rouming.FetchRouming.ViewModel)
 }
 
 final class RoumingViewController: UIViewController {
@@ -20,6 +20,8 @@ final class RoumingViewController: UIViewController {
     var interactor: RoumingBusinessLogic?
     var router: (RoumingRoutingLogic & RoumingDataPassing)?
     
+    var internetPackages: [InternetPackagesItemModel] = []
+    var smsPackages: [SMSCallPackagesItemModel] = []
     
     private lazy var travelHeaderView: TravelTableHeaderView = {
         let view = TravelTableHeaderView()
@@ -55,9 +57,9 @@ final class RoumingViewController: UIViewController {
         interactor?.load(request: request)
     }
     
-    func loadRoamingCountries() {
-        let request = Rouming.FetchRoamingCountries.Request()
-        interactor?.loadRoamingCountries(request: request)
+    func loadRoaming() {
+        let request = Rouming.FetchRouming.Request()
+        interactor?.loadRoaming(request: request)
     }
     
 }
@@ -67,20 +69,22 @@ final class RoumingViewController: UIViewController {
 extension RoumingViewController: RoumingDisplayLogic {
     
     func displayLoad(viewModel: Rouming.Load.ViewModel) {
-        self.loadRoamingCountries()
+        self.loadRoaming()
     }
     
-    func displayRoamingCountries(viewModel: Rouming.FetchRoamingCountries.ViewModel) {
-        self.travelHeaderView.items = viewModel.countries
+    func displayRoaming(viewModel: Rouming.FetchRouming.ViewModel) {
+        self.travelHeaderView.items = viewModel.roumingModel.countries
+        self.internetPackages = viewModel.roumingModel.internetPackages.items
+        self.smsPackages = viewModel.roumingModel.smsCallPackages.items
+//        self.travelHeaderView.items = viewModel.roumingModel.internetPackages
+        
         self.mainView?.tableView.reloadData()
     }
 }
 
 // MARK: - View Delegate
 
-extension RoumingViewController: RoumingViewDelegate {
-    
-}
+extension RoumingViewController: RoumingViewDelegate { }
 
 
 //MARK: UITableView
@@ -112,10 +116,12 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
             cell.delegate = self
             if sectionTitle == .internetPackages {
                 cell.cellType = .internet
+                cell.internetPackages = self.internetPackages
             } else if sectionTitle == .callAndSMSPackages {
                 cell.cellType = .smsAndCall
+                cell.smsPackages = self.smsPackages
             }
-            
+          
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
