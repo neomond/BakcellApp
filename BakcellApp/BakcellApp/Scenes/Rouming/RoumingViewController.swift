@@ -22,6 +22,7 @@ final class RoumingViewController: UIViewController {
     
     var internetPackages: [InternetPackagesItemModel] = []
     var smsPackages: [SMSCallPackagesItemModel] = []
+    var allInclPackages: [AllPackagesItemModel] = []
     
     private lazy var travelHeaderView: TravelTableHeaderView = {
         let view = TravelTableHeaderView()
@@ -76,7 +77,7 @@ extension RoumingViewController: RoumingDisplayLogic {
         self.travelHeaderView.items = viewModel.roumingModel.countries
         self.internetPackages = viewModel.roumingModel.internetPackages.items
         self.smsPackages = viewModel.roumingModel.smsCallPackages.items
-//        self.travelHeaderView.items = viewModel.roumingModel.internetPackages
+        self.allInclPackages = viewModel.roumingModel.allPackages.items
         
         self.mainView?.tableView.reloadData()
     }
@@ -98,7 +99,7 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
         case .internetPackages, .callAndSMSPackages:
             return 1
         case .allIncludedPackages:
-            return 3
+            return self.allInclPackages.count
         }
     }
     
@@ -128,6 +129,8 @@ extension RoumingViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .allIncludedPackages:
             let cell = tableView.dequeueReusableCell(withIdentifier: "allIncludedPackagesCell", for: indexPath) as! AllIncludedPackagesCell
+            let model = self.allInclPackages[indexPath.row]
+            cell.model = model
             
             cell.backgroundColor = .clear
             cell.selectionStyle = .none

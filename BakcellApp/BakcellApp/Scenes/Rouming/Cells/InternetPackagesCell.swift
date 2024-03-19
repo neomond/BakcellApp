@@ -22,7 +22,6 @@ class InternetPackagesCell: UITableViewCell, UICollectionViewDelegate, UICollect
         }
     }
     
-    
     var smsPackages: [SMSCallPackagesItemModel]? {
         didSet {
             self.collectionView.reloadData()

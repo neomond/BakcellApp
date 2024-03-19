@@ -15,6 +15,12 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
     
     var theme: ThemeProvider = App.theme
     
+    var model: AllPackagesItemModel? {
+        didSet {
+            configure()
+        }
+    }
+    
     private lazy var containerView: UIView = {
         let contentView = UIView()
         contentView.backgroundColor = adaptiveColor(.whitePrimary)
@@ -262,12 +268,14 @@ class AllIncludedPackagesCell: UITableViewCell, ThemeableView {
             make.height.width.equalTo(32)
         }
     }
+
     
-    func configure(with model: AllIncludedModel) {
+    private func configure() {
+        guard let model = model else { return }
         titleLabel.text = model.title
-        priceLabel.text = model.price
-        internetAmountLabel.text = model.internetQuota
-        callAmountLabel.text = model.callQuota
-        smsAmountLabel.text = model.smsQuota
+        priceLabel.text = model.period
+        internetAmountLabel.text = model.types.first?.units
+        callAmountLabel.text = model.types[1].units
+        smsAmountLabel.text = model.types[2].units
     }
 }

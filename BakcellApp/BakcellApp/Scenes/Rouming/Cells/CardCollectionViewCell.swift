@@ -11,7 +11,6 @@ import BakcellUIKit
 class CardCollectionViewCell: UICollectionViewCell, ThemeableView {
     static  var reuseIdentifier = "CardCollectionViewCell"
     
-    
     var theme: ThemeProvider = App.theme
     
     private lazy var containerView: UIView = {
