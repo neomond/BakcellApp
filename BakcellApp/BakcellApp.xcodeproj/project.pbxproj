@@ -37,6 +37,7 @@
 		7A0522062B984FF20082DB64 /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522052B984FF20082DB64 /* AppAssets.swift */; };
 		7A0522452B9F73E10082DB64 /* RoamingCountriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522442B9F73E10082DB64 /* RoamingCountriesTableView.swift */; };
 		7A0522722BA851310082DB64 /* RoumingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522712BA851310082DB64 /* RoumingModel.swift */; };
+		7A0522742BB18DC10082DB64 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0522732BB18DC00082DB64 /* LoadingIndicator.swift */; };
 		7A2DC9BB2B825DD100846D84 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2DC9BA2B825DD100846D84 /* SnapKit */; };
 		7A2DC9BF2B82772800846D84 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */; };
 		7A2DC9CE2B836CE000846D84 /* InternetPackagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */; };
@@ -161,6 +162,7 @@
 		7A0522052B984FF20082DB64 /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		7A0522442B9F73E10082DB64 /* RoamingCountriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingCountriesTableView.swift; sourceTree = "<group>"; };
 		7A0522712BA851310082DB64 /* RoumingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingModel.swift; sourceTree = "<group>"; };
+		7A0522732BB18DC00082DB64 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		7A2DC9BE2B82772800846D84 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		7A2DC9CD2B836CE000846D84 /* InternetPackagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackagesCell.swift; sourceTree = "<group>"; };
 		7A2DC9CF2B83728600846D84 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				7A0521CE2B9846790082DB64 /* SegmentedControl */,
+				7A0522732BB18DC00082DB64 /* LoadingIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				7A0522042B984E4A0082DB64 /* Extension + PageViewController.swift in Sources */,
 				7A0521E22B9848A30082DB64 /* AppDivider.swift in Sources */,
 				7A0521D02B9846910082DB64 /* SegmentedControl.swift in Sources */,
+				7A0522742BB18DC10082DB64 /* LoadingIndicator.swift in Sources */,
 				7A3290662B91AE5D00FCC3D3 /* CountryTableViewCell.swift in Sources */,
 				7A0521FE2B984D160082DB64 /* RoumingCountryDetailModels.swift in Sources */,
 				7A8E57342B81FA6100A31918 /* DashboardConfigurator.swift in Sources */,

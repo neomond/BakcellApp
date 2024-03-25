@@ -12,6 +12,7 @@ protocol RoumingDisplayLogic: AnyObject {
     func displayLoad(viewModel: Rouming.Load.ViewModel)
     
     func displayRoaming(viewModel: Rouming.FetchRouming.ViewModel)
+    
 }
 
 final class RoumingViewController: UIViewController {
@@ -59,6 +60,7 @@ final class RoumingViewController: UIViewController {
     }
     
     func loadRoaming() {
+        self.mainView?.startLoading()
         let request = Rouming.FetchRouming.Request()
         interactor?.loadRoaming(request: request)
     }
@@ -80,6 +82,7 @@ extension RoumingViewController: RoumingDisplayLogic {
         self.allInclPackages = viewModel.roumingModel.allPackages.items
         
         self.mainView?.tableView.reloadData()
+        self.mainView?.stopLoading()
     }
 }
 

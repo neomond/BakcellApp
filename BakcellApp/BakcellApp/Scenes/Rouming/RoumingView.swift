@@ -27,24 +27,20 @@ final class RoumingView: UIView, ThemeableView {
         return tableView
     }()
     
+    private lazy var loadingIndicator: LoadingActivityIndicator = {
+        let indicator = LoadingActivityIndicator()
+        return indicator
+    }()
     
     //MARK: Init
     
     init() {
         super.init(frame: .zero)
-        
-        self.addSubview(tableView)
         self.addSubviews()
-        self.addConstraints()
-        self.setupUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func updateConstraints() {
-        super.updateConstraints()
     }
     
     
@@ -52,17 +48,40 @@ final class RoumingView: UIView, ThemeableView {
     
     private func addSubviews() {
         
+        self.addSubview(self.tableView)
+        self.addSubview(self.loadingIndicator)
+        self.setupUI()
+        
         self.updateConstraints()
     }
     
-    private func addConstraints() {
-        tableView.snp.updateConstraints { make in
+    override func updateConstraints() {
+        super.updateConstraints()
+        
+        self.tableView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
+        }
+        self.loadingIndicator.snp.updateConstraints { make in
+            make.center.equalToSuperview()
         }
     }
     
     private func setupUI() {
         self.backgroundColor = adaptiveColor(.grayPrimary)
+    }
+    
+//    MARK: Loading indicator
+    
+    public func startLoading() {
+        self.loadingIndicator.startLoading()
+    }
+    
+    public func stopLoading() {
+        self.loadingIndicator.stopLoading {
+            self.tableView.isHidden = false
+            self.loadingIndicator.removeFromSuperview()
+        }
+        
     }
     
 }
