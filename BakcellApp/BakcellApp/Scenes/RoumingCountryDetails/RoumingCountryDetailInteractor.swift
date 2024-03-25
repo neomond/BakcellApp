@@ -14,7 +14,6 @@ protocol RoumingCountryDetailBusinessLogic {
 
 protocol RoumingCountryDetailDataStore {
     
-    //var name: String { get set }
     var country: String { get set }
 }
 
@@ -23,14 +22,15 @@ final class RoumingCountryDetailInteractor: RoumingCountryDetailBusinessLogic, R
     var country: String = ""
     
     var presenter: RoumingCountryDetailPresentationLogic?
+    
     lazy var worker: RoumingCountryDetailWorkingLogic = RoumingCountryDetailWorker()
-    //var name: String = ""
   
     
     // MARK: Business Logic
   
     func load(request: RoumingCountryDetail.Load.Request) {
-        let response = RoumingCountryDetail.Load.Response()
+        let categories = RoumingCountryDetail.categories
+        let response = RoumingCountryDetail.Load.Response(categories: categories)
         presenter?.presentLoad(response: response)
     }
 }

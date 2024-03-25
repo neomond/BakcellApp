@@ -21,9 +21,11 @@ enum RoumingCountryDetail {
         }
         
         struct Response {
+            let categories: [String]
         }
         
         struct ViewModel {
+            let categories: [String]
         }
     }
 }
@@ -31,7 +33,7 @@ enum RoumingCountryDetail {
 
 
 enum PageCategoryModel: String, CaseIterable {
-    case packages = "Paketlər"
+//    case packages = "Paketlər"
     case operators = "Operatorlar"
     case priceComparison = "Qiymət müqayisəsi"
     

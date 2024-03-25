@@ -35,8 +35,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         self.view = mainView
         mainView?.delegate = self
         self.setupPageViewController()
-        self.setSegmentedControl()
-       
     }
     
     override func viewDidLoad() {
@@ -46,30 +44,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         self.load()
     }
     
-    func setSegmentedControl() {
-        let titleStrings = RoumingCountryDetail.categories
-        let titles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] = [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.black)]
-            var titles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let title = NSAttributedString(string: titleString, attributes: attributes)
-                titles.append(title)
-            }
-            return titles
-        }()
-        
-        let selectedTitles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] =  [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.whitePrimary)]
-            var selectedTitles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
-                selectedTitles.append(selectedTitle)
-            }
-            return selectedTitles
-        }()
-        
-        self.mainView?.filterSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
-    }
     
     
     // MARK: - Public Methods
@@ -83,7 +57,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     
     private func setupPageViewController() {
         self.addChild(self.mainView!.pageViewController)
-        
         self.mainView!.pageViewController.didMove(toParent: self)
     }
     
@@ -94,6 +67,7 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
 extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
     
     func displayLoad(viewModel: RoumingCountryDetail.Load.ViewModel) {
+        mainView?.setupSegmentedControl(withTitles: viewModel.categories)
     }
 }
 

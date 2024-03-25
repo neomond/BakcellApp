@@ -19,7 +19,6 @@ protocol RoumingBusinessLogic {
 protocol RoumingDataStore {
     
     var countryName: String { get set }
-    //var name: String { get set }
 }
 
 final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
@@ -28,7 +27,6 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
     
     var presenter: RoumingPresentationLogic?
     lazy var worker: RoumingWorkingLogic = RoumingWorker()
-    //var name: String = ""
   
     
     // MARK: Business Logic
@@ -37,6 +35,7 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
         let response = Rouming.Load.Response()
         presenter?.presentLoad(response: response)
     }
+    
     
     func loadRoaming(request: Rouming.FetchRouming.Request) {
         worker.fetchRoaming { [weak self] data in
@@ -48,6 +47,7 @@ final class RoumingInteractor: RoumingBusinessLogic, RoumingDataStore {
         }
       
     }
+    
     func getSelectedCountry(countryName: String) {
         self.countryName = countryName
     }

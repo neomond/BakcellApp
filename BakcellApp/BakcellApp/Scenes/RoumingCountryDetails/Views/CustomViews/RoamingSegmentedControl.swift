@@ -94,3 +94,30 @@ extension UIImage {
         self.init(cgImage: cgImage)
     }
 }
+
+
+
+//    func setSegmentedControl() {
+//        let titleStrings = RoumingCountryDetail.categories
+//        let titles: [NSAttributedString] = {
+//            let attributes: [NSAttributedString.Key: Any] = [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.black)]
+//            var titles = [NSAttributedString]()
+//            for titleString in titleStrings {
+//                let title = NSAttributedString(string: titleString, attributes: attributes)
+//                titles.append(title)
+//            }
+//            return titles
+//        }()
+//
+//        let selectedTitles: [NSAttributedString] = {
+//            let attributes: [NSAttributedString.Key: Any] =  [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.whitePrimary)]
+//            var selectedTitles = [NSAttributedString]()
+//            for titleString in titleStrings {
+//                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
+//                selectedTitles.append(selectedTitle)
+//            }
+//            return selectedTitles
+//        }()
+//
+//        self.mainView?.filterSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
+//    }

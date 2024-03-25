@@ -20,7 +20,7 @@ final class RoumingCountryDetailPresenter: RoumingCountryDetailPresentationLogic
     // MARK: Presentation
   
     func presentLoad(response: RoumingCountryDetail.Load.Response) {
-        let viewModel = RoumingCountryDetail.Load.ViewModel()
+        let viewModel = RoumingCountryDetail.Load.ViewModel(categories: response.categories)
         viewController?.displayLoad(viewModel: viewModel)
     }
 }

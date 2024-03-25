@@ -44,22 +44,6 @@ final class RoumingCountryDetailView: UIView, ThemeableView {
         return segmentedControl
     }()
     
-//    lazy var contentTableView: UITableView = {
-//        let tableView = UITableView(frame: .zero, style: .plain)
-//        tableView.separatorStyle = .none
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.backgroundColor = .red
-//        tableView.contentInset = .zero
-//        tableView.alwaysBounceHorizontal = true
-//        tableView.register(OperatorViewCell.self, forCellReuseIdentifier: OperatorViewCell.reuseIdentifier)
-//
-//        tableView.register(PriceComparisonViewCell.self, forCellReuseIdentifier: PriceComparisonViewCell.reuseIdentifier)
-//        return tableView
-//
-//    }()
-//
-   
     
     //MARK: Init
     
@@ -68,11 +52,23 @@ final class RoumingCountryDetailView: UIView, ThemeableView {
     
         self.addSubviews()
         self.setupUI()
+        self.setupInitialViewController()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setupSegmentedControl(withTitles titles: [String]) {
+           let normalAttributes = [NSAttributedString.Key.font: AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.black)]
+           let selectedAttributes = [NSAttributedString.Key.font: AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.whitePrimary)]
+           
+           let attributedTitles = titles.map { NSAttributedString(string: $0, attributes: normalAttributes) }
+           let selectedAttributedTitles = titles.map { NSAttributedString(string: $0, attributes: selectedAttributes) }
+           
+           filterSegmentedControl.setTitles(attributedTitles, selectedTitles: selectedAttributedTitles)
+       }
+    
     
     override func updateConstraints() {
         super.updateConstraints()
@@ -87,35 +83,12 @@ final class RoumingCountryDetailView: UIView, ThemeableView {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(48)
         }
-        
-//        self.backViewForRoamingSegmentedControl.snp.updateConstraints { make in
-//            make.height.equalTo(64)
-//            make.width.equalToSuperview()
-//        }
-//
-//        self.roamingSegmentedControl.snp.updateConstraints { make in
-//            make.edges.equalToSuperview().inset(16)
-//        }
-        
-//            self.contentTableView.snp.updateConstraints { make in
-//                make.top.equalTo(self.filterSegmentedControl.snp.bottom)
-//                make.bottom.equalToSuperview()
-//                make.width.equalTo(120 + 120 + 120 + 16 + 4)
-//            }
-//
-//
-//        // Set a fixed height for the tableHeaderView
-//        if let headerView = self.contentTableView.tableHeaderView {
-//            headerView.frame.size.height = 64
-//        }
-        
     }
     
-    private lazy var firstViewController = UIViewController()
     private lazy var operatorsViewController = OperatorsViewController()
     private lazy var priceComparisonViewController = PriceComparisonViewController()
 
-    private lazy var viewControllers: [UIViewController] = [firstViewController, operatorsViewController, priceComparisonViewController]
+    private lazy var viewControllers: [UIViewController] = [operatorsViewController, priceComparisonViewController]
 
     
     private func showViewController(at index: Int) {
@@ -140,6 +113,11 @@ final class RoumingCountryDetailView: UIView, ThemeableView {
     
     private func setupUI() {
         self.backgroundColor = adaptiveColor(.grayPrimary)
+    }
+    
+    private func setupInitialViewController() {
+        self.selectedIndex = 0
+        self.showViewController(at: selectedIndex)
     }
     
 
