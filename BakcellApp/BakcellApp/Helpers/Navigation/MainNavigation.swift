@@ -4,12 +4,7 @@
 //
 //  Created by Nazrin Atayeva on 18.02.24.
 //
-//
-//  MainNavigation.swift
-//  BakcellApp
-//
-//  Created by Sevar Jafarli on 15.02.24.
-//
+
 
 import UIKit
 import BakcellUIKit
